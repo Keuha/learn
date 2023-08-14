@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875ED2A8A1DBA004C5446 /* NihongoApp.swift */; };
+		956875F02A8A1DBA004C5446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875EF2A8A1DBA004C5446 /* ContentView.swift */; };
+		956875F22A8A1DC1004C5446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F12A8A1DC1004C5446 /* Assets.xcassets */; };
+		956875F52A8A1DC1004C5446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */; };
+		956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875FE2A8A1DC1004C5446 /* NihongoTests.swift */; };
+		956876092A8A1DC2004C5446 /* NihongoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956876082A8A1DC2004C5446 /* NihongoUITests.swift */; };
+		9568760B2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		956875FB2A8A1DC1004C5446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 956875E22A8A1DBA004C5446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 956875E92A8A1DBA004C5446;
+			remoteInfo = Nihongo;
+		};
+		956876052A8A1DC2004C5446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 956875E22A8A1DBA004C5446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 956875E92A8A1DBA004C5446;
+			remoteInfo = Nihongo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		956875EA2A8A1DBA004C5446 /* Nihongo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nihongo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		956875ED2A8A1DBA004C5446 /* NihongoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoApp.swift; sourceTree = "<group>"; };
+		956875EF2A8A1DBA004C5446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		956875F12A8A1DC1004C5446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		956875FE2A8A1DC1004C5446 /* NihongoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoTests.swift; sourceTree = "<group>"; };
+		956876042A8A1DC2004C5446 /* NihongoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		956876082A8A1DC2004C5446 /* NihongoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITests.swift; sourceTree = "<group>"; };
+		9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		956875E72A8A1DBA004C5446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956875F72A8A1DC1004C5446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956876012A8A1DC2004C5446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		956875E12A8A1DBA004C5446 = {
+			isa = PBXGroup;
+			children = (
+				956875EC2A8A1DBA004C5446 /* Nihongo */,
+				956875FD2A8A1DC1004C5446 /* NihongoTests */,
+				956876072A8A1DC2004C5446 /* NihongoUITests */,
+				956875EB2A8A1DBA004C5446 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		956875EB2A8A1DBA004C5446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				956875EA2A8A1DBA004C5446 /* Nihongo.app */,
+				956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */,
+				956876042A8A1DC2004C5446 /* NihongoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		956875EC2A8A1DBA004C5446 /* Nihongo */ = {
+			isa = PBXGroup;
+			children = (
+				956875ED2A8A1DBA004C5446 /* NihongoApp.swift */,
+				956875EF2A8A1DBA004C5446 /* ContentView.swift */,
+				956875F12A8A1DC1004C5446 /* Assets.xcassets */,
+				956875F32A8A1DC1004C5446 /* Preview Content */,
+			);
+			path = Nihongo;
+			sourceTree = "<group>";
+		};
+		956875F32A8A1DC1004C5446 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		956875FD2A8A1DC1004C5446 /* NihongoTests */ = {
+			isa = PBXGroup;
+			children = (
+				956875FE2A8A1DC1004C5446 /* NihongoTests.swift */,
+			);
+			path = NihongoTests;
+			sourceTree = "<group>";
+		};
+		956876072A8A1DC2004C5446 /* NihongoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				956876082A8A1DC2004C5446 /* NihongoUITests.swift */,
+				9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */,
+			);
+			path = NihongoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		956875E92A8A1DBA004C5446 /* Nihongo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9568760E2A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "Nihongo" */;
+			buildPhases = (
+				956875E62A8A1DBA004C5446 /* Sources */,
+				956875E72A8A1DBA004C5446 /* Frameworks */,
+				956875E82A8A1DBA004C5446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nihongo;
+			productName = Nihongo;
+			productReference = 956875EA2A8A1DBA004C5446 /* Nihongo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		956875F92A8A1DC1004C5446 /* NihongoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956876112A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoTests" */;
+			buildPhases = (
+				956875F62A8A1DC1004C5446 /* Sources */,
+				956875F72A8A1DC1004C5446 /* Frameworks */,
+				956875F82A8A1DC1004C5446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				956875FC2A8A1DC1004C5446 /* PBXTargetDependency */,
+			);
+			name = NihongoTests;
+			productName = NihongoTests;
+			productReference = 956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		956876032A8A1DC2004C5446 /* NihongoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956876142A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoUITests" */;
+			buildPhases = (
+				956876002A8A1DC2004C5446 /* Sources */,
+				956876012A8A1DC2004C5446 /* Frameworks */,
+				956876022A8A1DC2004C5446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				956876062A8A1DC2004C5446 /* PBXTargetDependency */,
+			);
+			name = NihongoUITests;
+			productName = NihongoUITests;
+			productReference = 956876042A8A1DC2004C5446 /* NihongoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		956875E22A8A1DBA004C5446 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					956875E92A8A1DBA004C5446 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					956875F92A8A1DC1004C5446 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 956875E92A8A1DBA004C5446;
+					};
+					956876032A8A1DC2004C5446 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 956875E92A8A1DBA004C5446;
+					};
+				};
+			};
+			buildConfigurationList = 956875E52A8A1DBA004C5446 /* Build configuration list for PBXProject "Nihongo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 956875E12A8A1DBA004C5446;
+			productRefGroup = 956875EB2A8A1DBA004C5446 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				956875E92A8A1DBA004C5446 /* Nihongo */,
+				956875F92A8A1DC1004C5446 /* NihongoTests */,
+				956876032A8A1DC2004C5446 /* NihongoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		956875E82A8A1DBA004C5446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956875F52A8A1DC1004C5446 /* Preview Assets.xcassets in Resources */,
+				956875F22A8A1DC1004C5446 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956875F82A8A1DC1004C5446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956876022A8A1DC2004C5446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		956875E62A8A1DBA004C5446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956875F02A8A1DBA004C5446 /* ContentView.swift in Sources */,
+				956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956875F62A8A1DC1004C5446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956876002A8A1DC2004C5446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956876092A8A1DC2004C5446 /* NihongoUITests.swift in Sources */,
+				9568760B2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		956875FC2A8A1DC1004C5446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 956875E92A8A1DBA004C5446 /* Nihongo */;
+			targetProxy = 956875FB2A8A1DC1004C5446 /* PBXContainerItemProxy */;
+		};
+		956876062A8A1DC2004C5446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 956875E92A8A1DBA004C5446 /* Nihongo */;
+			targetProxy = 956876052A8A1DC2004C5446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9568760C2A8A1DC2004C5446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9568760D2A8A1DC2004C5446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9568760F2A8A1DC2004C5446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nihongo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Nihongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		956876102A8A1DC2004C5446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nihongo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Nihongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		956876122A8A1DC2004C5446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nihongo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nihongo";
+			};
+			name = Debug;
+		};
+		956876132A8A1DC2004C5446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nihongo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nihongo";
+			};
+			name = Release;
+		};
+		956876152A8A1DC2004C5446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nihongo;
+			};
+			name = Debug;
+		};
+		956876162A8A1DC2004C5446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C69642RJ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nihongo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		956875E52A8A1DBA004C5446 /* Build configuration list for PBXProject "Nihongo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9568760C2A8A1DC2004C5446 /* Debug */,
+				9568760D2A8A1DC2004C5446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9568760E2A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "Nihongo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9568760F2A8A1DC2004C5446 /* Debug */,
+				956876102A8A1DC2004C5446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956876112A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956876122A8A1DC2004C5446 /* Debug */,
+				956876132A8A1DC2004C5446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956876142A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956876152A8A1DC2004C5446 /* Debug */,
+				956876162A8A1DC2004C5446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 956875E22A8A1DBA004C5446 /* Project object */;
+}
