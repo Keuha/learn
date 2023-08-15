@@ -11,7 +11,9 @@ import SwiftUI
 struct NihongoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                WelcomeScreen()
+            }
         }
     }
 }

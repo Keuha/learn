@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875ED2A8A1DBA004C5446 /* NihongoApp.swift */; };
-		956875F02A8A1DBA004C5446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875EF2A8A1DBA004C5446 /* ContentView.swift */; };
+		956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875EF2A8A1DBA004C5446 /* WelcomeScreen.swift */; };
 		956875F22A8A1DC1004C5446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F12A8A1DC1004C5446 /* Assets.xcassets */; };
 		956875F52A8A1DC1004C5446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */; };
 		956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875FE2A8A1DC1004C5446 /* NihongoTests.swift */; };
 		956876092A8A1DC2004C5446 /* NihongoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956876082A8A1DC2004C5446 /* NihongoUITests.swift */; };
 		9568760B2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */; };
+		9589F9712A8A4595006DD5E5 /* YS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9589F9702A8A2A1C006DD5E5 /* YS.TTF */; };
+		9589F9722A8A459B006DD5E5 /* QuicksandRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */; };
+		9589F9732A8A459B006DD5E5 /* QuicksandObliqueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96C2A8A2956006DD5E5 /* QuicksandObliqueLight.otf */; };
+		9589F9742A8A459B006DD5E5 /* QuicksandObliqueRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96A2A8A2956006DD5E5 /* QuicksandObliqueRegular.otf */; };
+		9589F9752A8A459B006DD5E5 /* QuicksandLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F9692A8A2956006DD5E5 /* QuicksandLight.otf */; };
+		9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9782A8A479B006DD5E5 /* SuitableText.swift */; };
+		9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F97C2A8A517F006DD5E5 /* Fonts.swift */; };
+		9589F9822A8A6620006DD5E5 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9812A8A6620006DD5E5 /* MenuScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		956875EA2A8A1DBA004C5446 /* Nihongo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nihongo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956875ED2A8A1DBA004C5446 /* NihongoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoApp.swift; sourceTree = "<group>"; };
-		956875EF2A8A1DBA004C5446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		956875EF2A8A1DBA004C5446 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		956875F12A8A1DC1004C5446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,14 @@
 		956876042A8A1DC2004C5446 /* NihongoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956876082A8A1DC2004C5446 /* NihongoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITests.swift; sourceTree = "<group>"; };
 		9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9589F9692A8A2956006DD5E5 /* QuicksandLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandLight.otf; sourceTree = "<group>"; };
+		9589F96A2A8A2956006DD5E5 /* QuicksandObliqueRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandObliqueRegular.otf; sourceTree = "<group>"; };
+		9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandRegular.otf; sourceTree = "<group>"; };
+		9589F96C2A8A2956006DD5E5 /* QuicksandObliqueLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandObliqueLight.otf; sourceTree = "<group>"; };
+		9589F9702A8A2A1C006DD5E5 /* YS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = YS.TTF; sourceTree = "<group>"; };
+		9589F9782A8A479B006DD5E5 /* SuitableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitableText.swift; sourceTree = "<group>"; };
+		9589F97C2A8A517F006DD5E5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9589F9812A8A6620006DD5E5 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +110,13 @@
 		956875EC2A8A1DBA004C5446 /* Nihongo */ = {
 			isa = PBXGroup;
 			children = (
+				9589F9602A8A2898006DD5E5 /* Fonts */,
 				956875ED2A8A1DBA004C5446 /* NihongoApp.swift */,
-				956875EF2A8A1DBA004C5446 /* ContentView.swift */,
+				9589F9812A8A6620006DD5E5 /* MenuScreen.swift */,
+				956875EF2A8A1DBA004C5446 /* WelcomeScreen.swift */,
 				956875F12A8A1DC1004C5446 /* Assets.xcassets */,
 				956875F32A8A1DC1004C5446 /* Preview Content */,
+				9589F9782A8A479B006DD5E5 /* SuitableText.swift */,
 			);
 			path = Nihongo;
 			sourceTree = "<group>";
@@ -125,6 +144,35 @@
 				9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */,
 			);
 			path = NihongoUITests;
+			sourceTree = "<group>";
+		};
+		9589F9602A8A2898006DD5E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9589F96D2A8A2980006DD5E5 /* Japanese */,
+				9589F9682A8A294C006DD5E5 /* Latin */,
+				9589F97C2A8A517F006DD5E5 /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9589F9682A8A294C006DD5E5 /* Latin */ = {
+			isa = PBXGroup;
+			children = (
+				9589F96A2A8A2956006DD5E5 /* QuicksandObliqueRegular.otf */,
+				9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */,
+				9589F96C2A8A2956006DD5E5 /* QuicksandObliqueLight.otf */,
+				9589F9692A8A2956006DD5E5 /* QuicksandLight.otf */,
+			);
+			path = Latin;
+			sourceTree = "<group>";
+		};
+		9589F96D2A8A2980006DD5E5 /* Japanese */ = {
+			isa = PBXGroup;
+			children = (
+				9589F9702A8A2A1C006DD5E5 /* YS.TTF */,
+			);
+			path = Japanese;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +279,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9589F9752A8A459B006DD5E5 /* QuicksandLight.otf in Resources */,
+				9589F9732A8A459B006DD5E5 /* QuicksandObliqueLight.otf in Resources */,
+				9589F9722A8A459B006DD5E5 /* QuicksandRegular.otf in Resources */,
+				9589F9712A8A4595006DD5E5 /* YS.TTF in Resources */,
 				956875F52A8A1DC1004C5446 /* Preview Assets.xcassets in Resources */,
+				9589F9742A8A459B006DD5E5 /* QuicksandObliqueRegular.otf in Resources */,
 				956875F22A8A1DC1004C5446 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				956875F02A8A1DBA004C5446 /* ContentView.swift in Sources */,
+				9589F9822A8A6620006DD5E5 /* MenuScreen.swift in Sources */,
+				9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */,
+				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
 				956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */,
+				9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +476,7 @@
 				DEVELOPMENT_TEAM = 2C69642RJ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nihongo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +506,7 @@
 				DEVELOPMENT_TEAM = 2C69642RJ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nihongo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
