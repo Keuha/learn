@@ -11,32 +11,24 @@ struct MenuScreen: View {
     
     var body: some View {
         ZStack {
-            Color("bordeau", bundle: nil).ignoresSafeArea()
+            Color.custom.bordeau.ignoresSafeArea()
             VStack {
                 VStack {
                     HStack {
                         Button(action: action) {
-                            VStack {
-                                Group {
-                                    SuitableText("単語")
-                                    SuitableText("たんご", fontSize: 20)
-                                    SuitableText("vocabulaire")
-                                }
-                                .foregroundColor(.black)
-                                .padding()
+                            ButtonContent {
+                                SuitableText("単語")
+                                SuitableText("たんご", fontSize: 20)
+                                SuitableText("vocabulaire")
                             }
                         }
                         .buttonStyle(.bordered)
                         
                         Button(action: action) {
-                            VStack {
-                                Group {
-                                    SuitableText("単語")
-                                    SuitableText("たんご", fontSize: 20)
-                                    SuitableText("vocabulaire")
-                                }
-                                .foregroundColor(.black)
-                                .padding()
+                            ButtonContent {
+                                    SuitableText("話す")
+                                    SuitableText("はなす", fontSize: 20)
+                                    SuitableText("parler")
                             }
                         }
                         .buttonStyle(.bordered)
@@ -44,33 +36,22 @@ struct MenuScreen: View {
                 }
                 
                 VStack {
-                    HStack {
-                        Button(action: action) {
-                            VStack {
-                                Group {
-                                    SuitableText("単語")
-                                    SuitableText("たんご", fontSize: 20)
-                                    SuitableText("vocabulaire")
-                                }
-                                .foregroundColor(.black)
-                                .padding()
-                            }
+                    Button(action: action) {
+                        ButtonContent {
+                            SuitableText("文法")
+                            SuitableText("ぶんぽう", fontSize: 20)
+                            SuitableText("grammaire")
                         }
-                        .buttonStyle(.bordered)
-                        
-                        Button(action: action) {
-                            VStack {
-                                Group {
-                                    SuitableText("単語")
-                                    SuitableText("たんご", fontSize: 20)
-                                    SuitableText("vocabulaire")
-                                }
-                                .foregroundColor(.black)
-                                .padding()
-                            }
-                        }
-                        .buttonStyle(.bordered)
                     }
+                    .buttonStyle(.bordered)
+                    
+                    Button(action: action) {
+                        ButtonContent {
+                            SuitableText("メニュー ")
+                            SuitableText("menu")
+                        }
+                    }
+                    .buttonStyle(.bordered)
                 }
             }
         }

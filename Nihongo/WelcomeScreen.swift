@@ -9,69 +9,69 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     
-    @State private var zoomed = false
+    @State private var zoom = false
+    @State private var animate = false
     @State private var navigate = false
     @Namespace private var smooth
     
     var body: some View {
-        if navigate {
-            MenuScreen()
-                .transition(.slide)
-        } else {
-            ZStack {
-                Color("bordeau", bundle: nil).ignoresSafeArea()
-                if !zoomed {
+        ZStack {
+            Color.blue.ignoresSafeArea()
+            if navigate {
+                MenuScreen()
+            } else {
+                if !zoom {
+                    zoomed
+                } else {
                     VStack {
-                        Spacer()
-                        SuitableText("日本語を勉強します")
-                            .padding()
-                        SuitableText("apprentissage du japonnais")
-                        Spacer()
-                        Button(action: transition) {
-                            VStack {
-                                Group {
-                                    SuitableText("行けましょう")
-                                    SuitableText("allons-y")
-                                }
-                                .foregroundColor(.black)
-                                .padding()
+                        Button(action: { }) {
+                            ButtonContent {
+                                SuitableText("行けましょう")
+                                SuitableText("let's go")
                             }
                         }
                         .buttonStyle(.bordered)
                         .matchedGeometryEffect(id: "morph", in: smooth)
-                        
-                    }
-                    .padding()
-                } else {
-                    Button(action: { }) {
-                        VStack {
-                            Group {
-                                SuitableText("行けましょう")
-                                SuitableText("let's go")
-                            }
-                            .foregroundColor(.black)
-                            .padding()
-                        }
-                    }
-                    .disabled(true)
-                    .buttonStyle(.bordered)
-                    .matchedGeometryEffect(id: "morph", in: smooth)
-                    .padding()
+                        .transition(.move(edge: .top))
+                    }.animation(.default, value: self.animate)
                 }
-                
             }
         }
     }
+   
+    var zoomed : some View {
+        VStack {
+            Spacer()
+            SuitableText("日本語を勉強します")
+                .padding()
+            SuitableText("apprentissage du japonnais")
+            Spacer()
+            Button(action: transition) {
+                ButtonContent {
+                    SuitableText("行けましょう")
+                    SuitableText("allons-y")
+                }
+            }
+            .buttonStyle(.bordered)
+            .matchedGeometryEffect(id: "morph", in: smooth)
+        }
+        .padding()
+    }
+    
     
     private func transition() {
         withAnimation(.interpolatingSpring(mass: 1,
                                            stiffness: 250,
                                            damping: 15,
                                            initialVelocity: 0)){
-                    zoomed.toggle()
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
-            self.navigate = true
+            zoom.toggle()
+            animate.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+                animate.toggle()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+                    navigate.toggle()
+                }
+            }
         }
     }
 }

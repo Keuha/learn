@@ -22,6 +22,9 @@
 		9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9782A8A479B006DD5E5 /* SuitableText.swift */; };
 		9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F97C2A8A517F006DD5E5 /* Fonts.swift */; };
 		9589F9822A8A6620006DD5E5 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9812A8A6620006DD5E5 /* MenuScreen.swift */; };
+		9589F9852A8B623E006DD5E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9842A8B623E006DD5E5 /* Colors.swift */; };
+		9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9862A8B6364006DD5E5 /* Buttons.swift */; };
+		9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9882A8B66C4006DD5E5 /* ContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		9589F9782A8A479B006DD5E5 /* SuitableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitableText.swift; sourceTree = "<group>"; };
 		9589F97C2A8A517F006DD5E5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9589F9812A8A6620006DD5E5 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		9589F9842A8B623E006DD5E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9589F9862A8B6364006DD5E5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		9589F9882A8B66C4006DD5E5 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		956875E12A8A1DBA004C5446 = {
 			isa = PBXGroup;
 			children = (
+				9589F9832A8B622D006DD5E5 /* UI */,
 				956875EC2A8A1DBA004C5446 /* Nihongo */,
 				956875FD2A8A1DC1004C5446 /* NihongoTests */,
 				956876072A8A1DC2004C5446 /* NihongoUITests */,
@@ -173,6 +180,16 @@
 				9589F9702A8A2A1C006DD5E5 /* YS.TTF */,
 			);
 			path = Japanese;
+			sourceTree = "<group>";
+		};
+		9589F9832A8B622D006DD5E5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9589F9842A8B623E006DD5E5 /* Colors.swift */,
+				9589F9862A8B6364006DD5E5 /* Buttons.swift */,
+				9589F9882A8B66C4006DD5E5 /* ContainerView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */,
 				9589F9822A8A6620006DD5E5 /* MenuScreen.swift in Sources */,
+				9589F9852A8B623E006DD5E5 /* Colors.swift in Sources */,
 				9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */,
+				9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */,
 				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
 				956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */,
 				9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */,
