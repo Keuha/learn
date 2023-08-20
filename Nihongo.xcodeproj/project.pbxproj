@@ -12,8 +12,6 @@
 		956875F22A8A1DC1004C5446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F12A8A1DC1004C5446 /* Assets.xcassets */; };
 		956875F52A8A1DC1004C5446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */; };
 		956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875FE2A8A1DC1004C5446 /* NihongoTests.swift */; };
-		956876092A8A1DC2004C5446 /* NihongoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956876082A8A1DC2004C5446 /* NihongoUITests.swift */; };
-		9568760B2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */; };
 		9589F9712A8A4595006DD5E5 /* YS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9589F9702A8A2A1C006DD5E5 /* YS.TTF */; };
 		9589F9722A8A459B006DD5E5 /* QuicksandRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */; };
 		9589F9732A8A459B006DD5E5 /* QuicksandObliqueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96C2A8A2956006DD5E5 /* QuicksandObliqueLight.otf */; };
@@ -25,17 +23,18 @@
 		9589F9852A8B623E006DD5E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9842A8B623E006DD5E5 /* Colors.swift */; };
 		9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9862A8B6364006DD5E5 /* Buttons.swift */; };
 		9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9882A8B66C4006DD5E5 /* ContainerView.swift */; };
+		95A88F842A8CAE3E00953FA2 /* VocabularyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */; };
+		95A88F862A8CB5C600953FA2 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F852A8CB5C600953FA2 /* FontSize.swift */; };
+		95A88F882A8CBF7900953FA2 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F872A8CBF7900953FA2 /* Reader.swift */; };
+		95A88F8B2A8DFE0700953FA2 /* VocabularyFR-JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F8A2A8DFE0700953FA2 /* VocabularyFR-JP.swift */; };
+		95A88F8D2A8DFFBB00953FA2 /* VocabularyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F8C2A8DFFBB00953FA2 /* VocabularyGenerator.swift */; };
+		95B2C5992A923B69009A4370 /* VocabularyDisplayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C5982A923B69009A4370 /* VocabularyDisplayViewModelTests.swift */; };
+		95B2C59B2A923C29009A4370 /* StubTextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C59A2A923C29009A4370 /* StubTextReader.swift */; };
+		95B2C59D2A923C97009A4370 /* StubContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		956875FB2A8A1DC1004C5446 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 956875E22A8A1DBA004C5446 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 956875E92A8A1DBA004C5446;
-			remoteInfo = Nihongo;
-		};
-		956876052A8A1DC2004C5446 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 956875E22A8A1DBA004C5446 /* Project object */;
 			proxyType = 1;
@@ -52,9 +51,6 @@
 		956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956875FE2A8A1DC1004C5446 /* NihongoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoTests.swift; sourceTree = "<group>"; };
-		956876042A8A1DC2004C5446 /* NihongoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NihongoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		956876082A8A1DC2004C5446 /* NihongoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITests.swift; sourceTree = "<group>"; };
-		9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NihongoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9589F9692A8A2956006DD5E5 /* QuicksandLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandLight.otf; sourceTree = "<group>"; };
 		9589F96A2A8A2956006DD5E5 /* QuicksandObliqueRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandObliqueRegular.otf; sourceTree = "<group>"; };
 		9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandRegular.otf; sourceTree = "<group>"; };
@@ -66,6 +62,14 @@
 		9589F9842A8B623E006DD5E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9589F9862A8B6364006DD5E5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		9589F9882A8B66C4006DD5E5 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyDisplay.swift; sourceTree = "<group>"; };
+		95A88F852A8CB5C600953FA2 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		95A88F872A8CBF7900953FA2 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		95A88F8A2A8DFE0700953FA2 /* VocabularyFR-JP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VocabularyFR-JP.swift"; sourceTree = "<group>"; };
+		95A88F8C2A8DFFBB00953FA2 /* VocabularyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyGenerator.swift; sourceTree = "<group>"; };
+		95B2C5982A923B69009A4370 /* VocabularyDisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyDisplayViewModelTests.swift; sourceTree = "<group>"; };
+		95B2C59A2A923C29009A4370 /* StubTextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTextReader.swift; sourceTree = "<group>"; };
+		95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubContentGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,23 +87,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		956876012A8A1DC2004C5446 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		956875E12A8A1DBA004C5446 = {
 			isa = PBXGroup;
 			children = (
+				95A88F892A8DFDF100953FA2 /* JSON */,
 				9589F9832A8B622D006DD5E5 /* UI */,
 				956875EC2A8A1DBA004C5446 /* Nihongo */,
 				956875FD2A8A1DC1004C5446 /* NihongoTests */,
-				956876072A8A1DC2004C5446 /* NihongoUITests */,
 				956875EB2A8A1DBA004C5446 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,7 +106,6 @@
 			children = (
 				956875EA2A8A1DBA004C5446 /* Nihongo.app */,
 				956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */,
-				956876042A8A1DC2004C5446 /* NihongoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +113,7 @@
 		956875EC2A8A1DBA004C5446 /* Nihongo */ = {
 			isa = PBXGroup;
 			children = (
+				95A88F812A8CADE000953FA2 /* Vocabulary */,
 				9589F9602A8A2898006DD5E5 /* Fonts */,
 				956875ED2A8A1DBA004C5446 /* NihongoApp.swift */,
 				9589F9812A8A6620006DD5E5 /* MenuScreen.swift */,
@@ -124,6 +121,7 @@
 				956875F12A8A1DC1004C5446 /* Assets.xcassets */,
 				956875F32A8A1DC1004C5446 /* Preview Content */,
 				9589F9782A8A479B006DD5E5 /* SuitableText.swift */,
+				95A88F872A8CBF7900953FA2 /* Reader.swift */,
 			);
 			path = Nihongo;
 			sourceTree = "<group>";
@@ -140,17 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				956875FE2A8A1DC1004C5446 /* NihongoTests.swift */,
+				95B2C5972A923B55009A4370 /* Vocabulary */,
+				95B2C59A2A923C29009A4370 /* StubTextReader.swift */,
+				95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */,
 			);
 			path = NihongoTests;
-			sourceTree = "<group>";
-		};
-		956876072A8A1DC2004C5446 /* NihongoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				956876082A8A1DC2004C5446 /* NihongoUITests.swift */,
-				9568760A2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift */,
-			);
-			path = NihongoUITests;
 			sourceTree = "<group>";
 		};
 		9589F9602A8A2898006DD5E5 /* Fonts */ = {
@@ -159,6 +151,7 @@
 				9589F96D2A8A2980006DD5E5 /* Japanese */,
 				9589F9682A8A294C006DD5E5 /* Latin */,
 				9589F97C2A8A517F006DD5E5 /* Fonts.swift */,
+				95A88F852A8CB5C600953FA2 /* FontSize.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -190,6 +183,31 @@
 				9589F9882A8B66C4006DD5E5 /* ContainerView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		95A88F812A8CADE000953FA2 /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */,
+				95A88F8C2A8DFFBB00953FA2 /* VocabularyGenerator.swift */,
+			);
+			path = Vocabulary;
+			sourceTree = "<group>";
+		};
+		95A88F892A8DFDF100953FA2 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				95A88F8A2A8DFE0700953FA2 /* VocabularyFR-JP.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		95B2C5972A923B55009A4370 /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				95B2C5982A923B69009A4370 /* VocabularyDisplayViewModelTests.swift */,
+			);
+			path = Vocabulary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,24 +248,6 @@
 			productReference = 956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		956876032A8A1DC2004C5446 /* NihongoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 956876142A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoUITests" */;
-			buildPhases = (
-				956876002A8A1DC2004C5446 /* Sources */,
-				956876012A8A1DC2004C5446 /* Frameworks */,
-				956876022A8A1DC2004C5446 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				956876062A8A1DC2004C5446 /* PBXTargetDependency */,
-			);
-			name = NihongoUITests;
-			productName = NihongoUITests;
-			productReference = 956876042A8A1DC2004C5446 /* NihongoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,10 +262,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					956875F92A8A1DC1004C5446 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 956875E92A8A1DBA004C5446;
-					};
-					956876032A8A1DC2004C5446 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 956875E92A8A1DBA004C5446;
 					};
@@ -286,7 +282,6 @@
 			targets = (
 				956875E92A8A1DBA004C5446 /* Nihongo */,
 				956875F92A8A1DC1004C5446 /* NihongoTests */,
-				956876032A8A1DC2004C5446 /* NihongoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +308,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		956876022A8A1DC2004C5446 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,8 +316,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */,
+				95A88F862A8CB5C600953FA2 /* FontSize.swift in Sources */,
+				95A88F842A8CAE3E00953FA2 /* VocabularyDisplay.swift in Sources */,
+				95A88F8B2A8DFE0700953FA2 /* VocabularyFR-JP.swift in Sources */,
+				95A88F8D2A8DFFBB00953FA2 /* VocabularyGenerator.swift in Sources */,
 				9589F9822A8A6620006DD5E5 /* MenuScreen.swift in Sources */,
 				9589F9852A8B623E006DD5E5 /* Colors.swift in Sources */,
+				95A88F882A8CBF7900953FA2 /* Reader.swift in Sources */,
 				9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */,
 				9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */,
 				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
@@ -343,15 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		956876002A8A1DC2004C5446 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				956876092A8A1DC2004C5446 /* NihongoUITests.swift in Sources */,
-				9568760B2A8A1DC2004C5446 /* NihongoUITestsLaunchTests.swift in Sources */,
+				95B2C59D2A923C97009A4370 /* StubContentGenerator.swift in Sources */,
+				95B2C5992A923B69009A4370 /* VocabularyDisplayViewModelTests.swift in Sources */,
+				95B2C59B2A923C29009A4370 /* StubTextReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,11 +349,6 @@
 			isa = PBXTargetDependency;
 			target = 956875E92A8A1DBA004C5446 /* Nihongo */;
 			targetProxy = 956875FB2A8A1DC1004C5446 /* PBXContainerItemProxy */;
-		};
-		956876062A8A1DC2004C5446 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 956875E92A8A1DBA004C5446 /* Nihongo */;
-			targetProxy = 956876052A8A1DC2004C5446 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -585,42 +567,6 @@
 			};
 			name = Release;
 		};
-		956876152A8A1DC2004C5446 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C69642RJ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nihongo;
-			};
-			name = Debug;
-		};
-		956876162A8A1DC2004C5446 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C69642RJ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.NihongoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nihongo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -647,15 +593,6 @@
 			buildConfigurations = (
 				956876122A8A1DC2004C5446 /* Debug */,
 				956876132A8A1DC2004C5446 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		956876142A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				956876152A8A1DC2004C5446 /* Debug */,
-				956876162A8A1DC2004C5446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
