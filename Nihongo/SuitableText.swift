@@ -9,21 +9,21 @@ import SwiftUI
 
 struct SuitableText: View {
     var content: String
-    var size: CGFloat
+    var size: FontSize
     
-    init(_ content: String, fontSize: CGFloat = 16) {
+    init(_ content: String, fontSize: FontSize = .regular) {
         self.content = content
-        self.size = 16
+        self.size = fontSize
     }
     
     var body: some View {
-        return determineFont()
+      determineFont()
     }
     
     private func determineFont() -> Text {
         if content.range(of: "\\p{Latin}", options: .regularExpression) == nil {
-            return Text(content).font(.custom(customFonts.YS.rawValue, size: 33))
+            return Text(content).font(.custom(customFonts.YS.rawValue, size: size.rawValue))
         }
-        return Text(content).font(.custom(customFonts.quicksand.light.rawValue, size: size))
+        return Text(content).font(.custom(customFonts.quicksand.light.rawValue, size: size.rawValue))
     }
 }
