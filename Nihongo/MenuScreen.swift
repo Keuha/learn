@@ -17,8 +17,8 @@ struct MenuScreen: View {
                     HStack {
                         Button(action: action) {
                             ButtonContent {
-                                SuitableText("単語")
-                                SuitableText("たんご", fontSize: 20)
+                                SuitableText("単語", fontSize: .title)
+                                SuitableText("たんご", fontSize: .subtitle)
                                 SuitableText("vocabulaire")
                             }
                         }
@@ -26,8 +26,8 @@ struct MenuScreen: View {
                         
                         Button(action: action) {
                             ButtonContent {
-                                    SuitableText("話す")
-                                    SuitableText("はなす", fontSize: 20)
+                                    SuitableText("話す", fontSize: .title)
+                                    SuitableText("はなす", fontSize: .subtitle)
                                     SuitableText("parler")
                             }
                         }
@@ -38,8 +38,8 @@ struct MenuScreen: View {
                 VStack {
                     Button(action: action) {
                         ButtonContent {
-                            SuitableText("文法")
-                            SuitableText("ぶんぽう", fontSize: 20)
+                            SuitableText("文法", fontSize: .title)
+                            SuitableText("ぶんぽう", fontSize: .subtitle)
                             SuitableText("grammaire")
                         }
                     }
@@ -47,7 +47,7 @@ struct MenuScreen: View {
                     
                     Button(action: action) {
                         ButtonContent {
-                            SuitableText("メニュー ")
+                            SuitableText("メニュー ", fontSize: .title)
                             SuitableText("menu")
                         }
                     }
