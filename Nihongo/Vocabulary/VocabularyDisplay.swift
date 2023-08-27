@@ -69,7 +69,6 @@ struct VocabularyDisplay: View {
                 next()
             }
         }
-
     }
     
     @ViewBuilder var readBlock : some View {
