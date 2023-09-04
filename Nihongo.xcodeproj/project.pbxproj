@@ -38,6 +38,7 @@
 		95C0F73E2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */; };
 		95C0F7412A936296009D5B0E /* VoiceAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */; };
 		95C0F7432A936321009D5B0E /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */; };
+		95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionDisplay.swift; sourceTree = "<group>"; };
 		95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAuthorization.swift; sourceTree = "<group>"; };
 		95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTranscriber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */,
+				95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */,
 			);
 			path = VocalRecognition;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */,
 				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
 				956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */,
+				95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */,
 				9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */,
 				95C0F7432A936321009D5B0E /* AuthorizationRequest.swift in Sources */,
 			);
@@ -539,6 +543,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nihongo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -570,6 +575,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nihongo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

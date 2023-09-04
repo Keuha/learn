@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-
+import Combine
 
 struct VoiceRecognitionDisplay: View {
    
@@ -21,11 +21,20 @@ struct VoiceRecognitionDisplay: View {
                 Spacer()
                 readBlock
                 Spacer()
+                micButton
                 Spacer()
             }
         }.onAppear {
             content = model.nextContent()
+        }.onDisappear {
+            model.stopMicrophone()
         }
+    }
+    
+    @ViewBuilder var micButton : some View {
+        Button(action: model.triggerMicrophone, label: {
+            Text("Test Microphone")
+        })
     }
     
     @ViewBuilder var readBlock : some View {
@@ -42,14 +51,37 @@ struct VoiceRecognitionDisplay: View {
 
 struct VoiceRecognitionDisplayViewModel {
     private var generator: ContentGenerator
+    private var voiceTranscriber = VoiceTranscriber()
+    private var cancellables: Set<AnyCancellable> = []
     
     init(generator: ContentGenerator = VocabularyGenerator()) {
         self.generator = generator
-       
+        self.voiceTranscriber.transcribtionPublisher
+            .receive(on: RunLoop.main)
+            .sink { (status) in
+                switch status {
+                case .loaded(let vocal):
+                    print("should be in hiragana only \(vocal)")
+                case .error(let error):
+                    print("an error occured \(error)")
+                default:
+                    break
+            }
+        }.store(in: &cancellables)
     }
     
     func nextContent() -> Content {
         return generator.nextContent()
+    }
+    
+    func triggerMicrophone() {
+        if voiceTranscriber.isUsed == false {
+            voiceTranscriber.startSession()
+        }
+    }
+    
+    func stopMicrophone() {
+        voiceTranscriber.stopSession()
     }
 }
 
