@@ -13,7 +13,6 @@ import Combine
 class VoiceAuthorization: AuthorizationRequest, ObservableObject {
     @Published private var status: Loadable<AuthorizationStatus> = .notRequested
     
-    
     var statusPublisher: Published<Loadable<AuthorizationStatus>>.Publisher { $status }
     
     @MainActor func requestAuthorization() {
