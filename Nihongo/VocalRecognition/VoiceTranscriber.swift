@@ -91,14 +91,12 @@ class VoiceTranscriber {
     
     private func handleTranscribtion(_ final: String) {
         DispatchQueue.main.async { [weak self] in
-//            self?.stopSession()
             self?.transcribtion.setValue(final)
         }
     }
     
     private func dispatchError(_ error: Error) {
         DispatchQueue.main.async { [weak self] in
-//            self?.stopSession()
             self?.transcribtion.setError(error)
         }
     }
