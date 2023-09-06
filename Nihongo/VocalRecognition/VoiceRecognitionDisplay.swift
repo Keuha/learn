@@ -11,7 +11,7 @@ import Combine
 
 struct VoiceRecognitionDisplay: View {
    
-    var model = VoiceRecognitionDisplayViewModel()
+    @ObservedObject var model = VoiceRecognitionDisplayViewModel()
     @State private var content = Content()
     
     var body: some View {
@@ -26,15 +26,24 @@ struct VoiceRecognitionDisplay: View {
             }
         }.onAppear {
             content = model.nextContent()
+            model.startMicrophone()
         }.onDisappear {
             model.stopMicrophone()
         }
     }
     
     @ViewBuilder var micButton : some View {
-        Button(action: model.triggerMicrophone, label: {
-            Text("Test Microphone")
-        })
+       
+        Button(action: {
+           
+        }) {
+            Image(systemName: model.isListening ? "mic.fill" : "mic")
+                .font(.title)
+                .imageScale(.large)
+                .colorInvert()
+        }
+        .buttonStyle(.bordered)
+        .controlSize(.large)
     }
     
     @ViewBuilder var readBlock : some View {
@@ -49,19 +58,22 @@ struct VoiceRecognitionDisplay: View {
     }
 }
 
-struct VoiceRecognitionDisplayViewModel {
+class VoiceRecognitionDisplayViewModel: ObservableObject {
     private var generator: ContentGenerator
     private var voiceTranscriber = VoiceTranscriber()
     private var cancellables: Set<AnyCancellable> = []
+    private var content: Content!
+    @Published var isListening: Bool = false
     
     init(generator: ContentGenerator = VocabularyGenerator()) {
         self.generator = generator
         self.voiceTranscriber.transcribtionPublisher
             .receive(on: RunLoop.main)
-            .sink { (status) in
+            .sink { [weak self] (status) in
                 switch status {
                 case .loaded(let vocal):
                     print("should be in hiragana only \(vocal)")
+                    self?.compareResult(vocal)
                 case .error(let error):
                     print("an error occured \(error)")
                 default:
@@ -71,10 +83,11 @@ struct VoiceRecognitionDisplayViewModel {
     }
     
     func nextContent() -> Content {
-        return generator.nextContent()
+        content = generator.nextContent()
+        return content
     }
     
-    func triggerMicrophone() {
+    func startMicrophone() {
         if voiceTranscriber.isUsed == false {
             voiceTranscriber.startSession()
         }
@@ -82,6 +95,14 @@ struct VoiceRecognitionDisplayViewModel {
     
     func stopMicrophone() {
         voiceTranscriber.stopSession()
+    }
+    
+    private func compareResult(_ vocal: String) {
+        if vocal == content.hiragana {
+            print("navigate to next content")
+        } else {
+            print("react to the error")
+        }
     }
 }
 
