@@ -24,12 +24,10 @@ class VoiceTranscriber {
     }
     
     private let audioEngine = AVAudioEngine()
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))
     private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var speechRecognitionTask: SFSpeechRecognitionTask?
     
     func startSession() {
-        cancelPreviousSession()
         startAudioSession()
         speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
@@ -38,12 +36,11 @@ class VoiceTranscriber {
                 "SFSpeechAudioBufferRecognitionRequest object creation failed") }
         
         recognitionRequest.shouldReportPartialResults = true
-        
-        speechRecognitionTask = speechRecognizer?
-            .recognitionTask(with: recognitionRequest) { [weak self] result, error in
+       
+        speechRecognitionTask = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
                 guard let final = result?.bestTranscription.formattedString else {
                     if let err = error {
-                        self?.handleError(err)
+                        self?.dispatchError(err)
                     }
                     return
                 }
@@ -78,33 +75,30 @@ class VoiceTranscriber {
             dispatchError(error)
         }
     }
-    
-    private func handleError(_ error: Error) {
-        stopSession()
-        dispatchError(error)
-    }
-    
-    private func handleTranscribtion(_ final: String) {
-        stopSession()
-        DispatchQueue.main.async { [weak self] in
-            self?.transcribtion.setValue(final)
-        }
-    }
 
     func stopSession() {
+        speechRecognitionRequest?.endAudio()
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
-        speechRecognitionRequest = nil
-        speechRecognitionTask = nil
+        cancelPreviousSession()
     }
 
     private func cancelPreviousSession() {
         speechRecognitionTask?.cancel()
+        speechRecognitionTask?.finish()
         speechRecognitionTask = nil
+    }
+    
+    private func handleTranscribtion(_ final: String) {
+        DispatchQueue.main.async { [weak self] in
+//            self?.stopSession()
+            self?.transcribtion.setValue(final)
+        }
     }
     
     private func dispatchError(_ error: Error) {
         DispatchQueue.main.async { [weak self] in
+//            self?.stopSession()
             self?.transcribtion.setError(error)
         }
     }
