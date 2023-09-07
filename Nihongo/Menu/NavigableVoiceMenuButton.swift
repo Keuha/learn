@@ -75,7 +75,3 @@ class NavigableVoiceMenuButtonViewModel : ObservableObject {
         }
     }
 }
-
-#Preview {
-    NavigableVoiceMenuButton()
-}

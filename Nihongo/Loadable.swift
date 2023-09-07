@@ -34,7 +34,7 @@ enum Loadable<Value> {
     var notRequested : Bool {
         switch self {
         case .notRequested:
-                return true
+            return true
         default:
             return false
         }
@@ -63,6 +63,20 @@ enum Loadable<Value> {
             }
         default:
             break
+        }
+    }
+}
+
+extension Loadable: Equatable where Value: Equatable {
+    static func == (lhs: Loadable<Value>, rhs: Loadable<Value>) -> Bool {
+        switch (lhs, rhs) {
+        case (.notRequested, .notRequested): return true
+        case let (.loading(lhsV, lhsC), .loading(rhsV, rhsC)):
+            return lhsV == rhsV && lhsC === rhsC
+        case let (.loaded(lhsV), .loaded(rhsV)): return lhsV == rhsV
+        case let (.error(lhsE), .error(rhsE)):
+            return lhsE.localizedDescription == rhsE.localizedDescription
+        default: return false
         }
     }
 }
