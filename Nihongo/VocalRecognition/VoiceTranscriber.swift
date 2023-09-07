@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Speech
 
-class VoiceTranscriber {
+class VoiceTranscriber: VoiceTranscription {
     @Published private var transcribtion: Loadable<String> = .notRequested
     
     var transcribtionPublisher: Published<Loadable<String>>.Publisher { $transcribtion }
@@ -63,6 +63,8 @@ class VoiceTranscriber {
     }
     
     private func startAudio() {
+        audioEngine.stop()
+        audioEngine.inputNode.removeTap(onBus: 0)
         let recordingFormat = audioEngine.inputNode.outputFormat(forBus: 0)
         audioEngine.inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
             (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
@@ -77,13 +79,13 @@ class VoiceTranscriber {
     }
 
     func stopSession() {
-        speechRecognitionRequest?.endAudio()
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
         cancelPreviousSession()
     }
 
     private func cancelPreviousSession() {
+        speechRecognitionRequest?.endAudio()
         speechRecognitionTask?.cancel()
         speechRecognitionTask?.finish()
         speechRecognitionTask = nil
