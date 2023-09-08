@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout
-        - uses: actions/checkout@v3
-        - uses: ruby/setup-ruby@v1
+        uses: actions/checkout@v3
+        uses: ruby/setup-ruby@v1
           with:
             ruby-version: '3.0'
             bundler-cache: true
-        - uses: maierj/fastlane-action@v3.0.0
+        uses: maierj/fastlane-action@v3.0.0
           with:
             lane: 'beta'
       - name: Set Default Scheme
