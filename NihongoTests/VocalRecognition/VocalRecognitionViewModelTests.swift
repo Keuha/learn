@@ -39,7 +39,7 @@ final class VocalRecognitionViewModelTests: XCTestCase {
                 }
             }.store(in: &cancellables)
         model.startMicrophone()
-        wait(for: [exp])
+        waitForExpectations(timeout: 1)
         XCTAssertFalse(voiceReco.stopSessionHasBeenCalled)
     }
     
@@ -60,7 +60,7 @@ final class VocalRecognitionViewModelTests: XCTestCase {
                 }
             }.store(in: &cancellables)
         model.startMicrophone()
-        wait(for: [exp])
+        waitForExpectations(timeout: 1)
         model.stopMicrophone()
         XCTAssertFalse(model.isListening)
         XCTAssertTrue(voiceReco.stopSessionHasBeenCalled)
@@ -86,7 +86,7 @@ final class VocalRecognitionViewModelTests: XCTestCase {
                 }
             }.store(in: &cancellables)
         model.startMicrophone()
-        wait(for: [exp])
+        waitForExpectations(timeout: 1)
         XCTAssertEqual(contentGenerator.nextContentHasBeenCalledXTime, 2) // sting matches, new content should be generated
         XCTAssertEqual(model.said, resultToCompare)
     }
@@ -109,7 +109,7 @@ final class VocalRecognitionViewModelTests: XCTestCase {
                 }
             }.store(in: &cancellables)
         model.startMicrophone()
-        wait(for: [exp])
+        waitForExpectations(timeout: 1)
         XCTAssertEqual(contentGenerator.nextContentHasBeenCalledXTime, 1) // sting does not matche, new content should not be generated
     }
 }
