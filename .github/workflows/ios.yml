@@ -14,13 +14,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: ruby
         uses: ruby/setup-ruby@v1
           with:
             ruby-version: '3.0'
             bundler-cache: true
+      - name: fastlane Action
         uses: maierj/fastlane-action@v3.0.0
           with:
-            lane: 'beta'
+            lane: 'tests'
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
