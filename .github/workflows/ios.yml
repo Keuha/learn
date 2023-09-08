@@ -1,9 +1,11 @@
 name: iOS starter workflow
 
 on:
+  push:
+    branches: [ "*" ]
   pull_request:
     branches: [develop, master]
-    types: [opened, reopened]
+    types: [reopened]
 jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
