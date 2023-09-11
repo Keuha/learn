@@ -13,7 +13,7 @@ enum AuthorizationStatus {
     case granted
     case undetermined
     case unknown
-    
+
     init(_ status: SFSpeechRecognizerAuthorizationStatus) {
         switch status {
         case .authorized:

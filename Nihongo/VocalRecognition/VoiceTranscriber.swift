@@ -11,7 +11,7 @@ import Speech
 
 class VoiceTranscriber: VoiceTranscription {
     @Published private var transcribtion: Loadable<String> = .notRequested
-    
+
     var transcribtionPublisher: Published<Loadable<String>>.Publisher { $transcribtion }
 
     var isUsed: Bool {
@@ -22,58 +22,57 @@ class VoiceTranscriber: VoiceTranscription {
             return false
         }
     }
-    
+
     private let audioEngine = AVAudioEngine()
     private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var speechRecognitionTask: SFSpeechRecognitionTask?
-    
+
     func startSession() {
         startAudioSession()
         speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
         guard let recognitionRequest = speechRecognitionRequest else {
             fatalError(
                 "SFSpeechAudioBufferRecognitionRequest object creation failed") }
-        
         recognitionRequest.shouldReportPartialResults = true
-       
-        speechRecognitionTask = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
+        speechRecognitionTask = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))?
+            .recognitionTask(with: recognitionRequest) { [weak self] result, error in
                 guard let final = result?.bestTranscription.formattedString else {
                     if let err = error {
                         self?.dispatchError(err)
                     }
                     return
                 }
-                self?.handleTranscribtion(final.applyingTransform(.toLatin, reverse: false)?.applyingTransform(.latinToHiragana, reverse: false) ?? "")
+                self?.handleTranscribtion(final.applyingTransform(.toLatin, reverse: false)?
+                    .applyingTransform(.latinToHiragana, reverse: false) ?? "")
             }
         startAudio()
     }
-    
+
     private func startAudioSession() {
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSession.Category.record,
                                          mode: .default)
-        } catch (let error) {
+        } catch let error {
             dispatchError(error)
         }
         DispatchQueue.main.async {
             self.transcribtion.setIsLoading()
         }
     }
-    
+
     private func startAudio() {
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
         let recordingFormat = audioEngine.inputNode.outputFormat(forBus: 0)
-        audioEngine.inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
-            (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
+        audioEngine.inputNode
+            .installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, _) in
             self.speechRecognitionRequest?.append(buffer)
         }
-           audioEngine.prepare()
+        audioEngine.prepare()
         do {
             try audioEngine.start()
-        } catch (let error) {
+        } catch let error {
             dispatchError(error)
         }
     }
@@ -90,13 +89,13 @@ class VoiceTranscriber: VoiceTranscription {
         speechRecognitionTask?.finish()
         speechRecognitionTask = nil
     }
-    
+
     private func handleTranscribtion(_ final: String) {
         DispatchQueue.main.async { [weak self] in
             self?.transcribtion.setValue(final)
         }
     }
-    
+
     private func dispatchError(_ error: Error) {
         DispatchQueue.main.async { [weak self] in
             self?.transcribtion.setError(error)

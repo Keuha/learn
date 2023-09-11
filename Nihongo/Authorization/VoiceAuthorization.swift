@@ -12,9 +12,9 @@ import Combine
 
 class VoiceAuthorization: AuthorizationRequest, ObservableObject {
     @Published private var status: Loadable<AuthorizationStatus> = .notRequested
-    
+
     var statusPublisher: Published<Loadable<AuthorizationStatus>>.Publisher { $status }
-    
+
     @MainActor func requestAuthorization() {
         self.status.setIsLoading()
         SFSpeechRecognizer.requestAuthorization { authStatus in
@@ -23,7 +23,7 @@ class VoiceAuthorization: AuthorizationRequest, ObservableObject {
             }
         }
     }
-    
+
     init() {
         let value = SFSpeechRecognizer.authorizationStatus()
         DispatchQueue.main.async {

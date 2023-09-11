@@ -10,20 +10,20 @@ import SwiftUI
 struct SuitableText: View {
     var content: String
     var size: FontSize
-    
+
     init(_ content: String, fontSize: FontSize = .regular) {
         self.content = content
         self.size = fontSize
     }
-    
+
     var body: some View {
       determineFont()
     }
-    
+
     private func determineFont() -> Text {
         if content.range(of: "\\p{Latin}", options: .regularExpression) == nil {
-            return Text(content).font(.custom(customFonts.YS.rawValue, size: size.rawValue))
+            return Text(content).font(.custom(CustomFonts.YSFont.rawValue, size: size.rawValue))
         }
-        return Text(content).font(.custom(customFonts.quicksand.light.rawValue, size: size.rawValue))
+        return Text(content).font(.custom(CustomFonts.Quicksand.light.rawValue, size: size.rawValue))
     }
 }

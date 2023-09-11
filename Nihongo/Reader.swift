@@ -17,7 +17,7 @@ class TextToSpeach: TextReader {
     init() {
         AVSpeechSynthesisVoice.speechVoices()
     }
-    
+
     func read(_ content: String) {
         let utterance = AVSpeechUtterance(string: content)
         utterance.pitchMultiplier = 0.8

@@ -88,6 +88,7 @@
 		95B2C5982A923B69009A4370 /* VocabularyDisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyDisplayViewModelTests.swift; sourceTree = "<group>"; };
 		95B2C59A2A923C29009A4370 /* StubTextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTextReader.swift; sourceTree = "<group>"; };
 		95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubContentGenerator.swift; sourceTree = "<group>"; };
+		95B68ECD2AAF5735002AF70E /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		95BB26B02A9B575A00C0C159 /* NavigableVoiceMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableVoiceMenuButton.swift; sourceTree = "<group>"; };
 		95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionDisplay.swift; sourceTree = "<group>"; };
 		95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAuthorization.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		956875E12A8A1DBA004C5446 = {
 			isa = PBXGroup;
 			children = (
+				95B68ECD2AAF5735002AF70E /* swiftlint.yml */,
 				958A294F2AA9D431001AEFFC /* Nihongo.xctestplan */,
 				95A88F892A8DFDF100953FA2 /* JSON */,
 				9589F9832A8B622D006DD5E5 /* UI */,
@@ -307,8 +309,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				95B68ED22AAF5A5A002AF70E /* PBXTargetDependency */,
 			);
 			name = Nihongo;
+			packageProductDependencies = (
+			);
 			productName = Nihongo;
 			productReference = 956875EA2A8A1DBA004C5446 /* Nihongo.app */;
 			productType = "com.apple.product-type.application";
@@ -317,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 956876112A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoTests" */;
 			buildPhases = (
+				95B68ECE2AAF577C002AF70E /* Swiftlint */,
 				956875F62A8A1DC1004C5446 /* Sources */,
 				956875F72A8A1DC1004C5446 /* Frameworks */,
 				956875F82A8A1DC1004C5446 /* Resources */,
@@ -359,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 956875E12A8A1DBA004C5446;
+			packageReferences = (
+				95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 956875EB2A8A1DBA004C5446 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -392,6 +401,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95B68ECE2AAF577C002AF70E /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		956875E62A8A1DBA004C5446 /* Sources */ = {
@@ -443,6 +473,10 @@
 			isa = PBXTargetDependency;
 			target = 956875E92A8A1DBA004C5446 /* Nihongo */;
 			targetProxy = 956875FB2A8A1DC1004C5446 /* PBXContainerItemProxy */;
+		};
+		95B68ED22AAF5A5A002AF70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 95B68ED12AAF5A5A002AF70E /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -706,6 +740,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B68ED12AAF5A5A002AF70E /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 956875E22A8A1DBA004C5446 /* Project object */;
 }

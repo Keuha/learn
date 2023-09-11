@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ButtonContent<Content: View>: ContainerView {
     var content: () -> Content
-    
+
     var body: some View {
         VStack {
             Group {

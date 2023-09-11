@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 struct MenuScreen: View {
-    
+
     var body: some View {
     NavigationStack {
         ZStack {
-            Color.custom.bordeau.ignoresSafeArea()
+            Color.Custom.bordeau.ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
@@ -30,27 +30,24 @@ struct MenuScreen: View {
                 }
                     Spacer()
                 }.frame(maxWidth: .infinity)
-                
                 VStack {
-                    Button(action: {}) {
+                    Button(action: {}, label: {
                         ButtonContent {
                             SuitableText("文法", fontSize: .title)
                             SuitableText("ぶんぽう", fontSize: .subtitle)
                             SuitableText("grammaire")
                         }
-                    }
+                    })
                     .buttonStyle(.bordered)
-                    
-                    Button(action: {}) {
+                    Button(action: {}, label: {
                         ButtonContent {
                             SuitableText("メニュー ", fontSize: .title)
                             SuitableText("menu")
                         }
-                    }
+                    })
                     .buttonStyle(.bordered)
                 }
             }
         }
     }
 }
-

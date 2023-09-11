@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct VocabularyDisplay: View {
-    
+
     @State private var reveal = false
     @State private var opacity = 0.0
     @State private var content = Content()
@@ -17,14 +17,13 @@ struct VocabularyDisplay: View {
 
     var body: some View {
         ZStack {
-            Color.custom.beige.ignoresSafeArea()
+            Color.Custom.beige.ignoresSafeArea()
             VStack {
                 Spacer()
                 readBlock
                 translationBlock
                 Spacer()
             }
-            
         }.onAppear {
             content = model.nextContent()
         }
@@ -38,13 +37,13 @@ struct VocabularyDisplay: View {
             }
         }
     }
-    
+
     func next() {
         reveal.toggle()
         content = model.nextContent()
     }
-    
-    @ViewBuilder var translationBlock : some View {
+
+    @ViewBuilder var translationBlock: some View {
         if reveal {
             translationContent
             .transition(.push(from: .bottom))
@@ -52,8 +51,8 @@ struct VocabularyDisplay: View {
             translationContent.opacity(0)
         }
     }
-    
-    @ViewBuilder var translationContent : some View {
+
+    @ViewBuilder var translationContent: some View {
         Group {
             Image(systemName: "speaker.wave.2")
                 .onTapGesture {
@@ -70,8 +69,8 @@ struct VocabularyDisplay: View {
             }
         }
     }
-    
-    @ViewBuilder var readBlock : some View {
+
+    @ViewBuilder var readBlock: some View {
         Group {
             VStack {
                 SuitableText(content.kanji, fontSize: .title)
@@ -85,27 +84,27 @@ struct VocabularyDisplay: View {
 struct VocabularyDisplayViewModel {
     private let reader: TextReader
     private var generator: ContentGenerator
-    
+
     init(generator: ContentGenerator = VocabularyGenerator(), reader: TextReader = TextToSpeach()) {
         self.generator = generator
         self.reader = reader
     }
-    
+
     func read(_ content: String) {
         reader.read(content)
     }
-    
+
     func readLater(_ content: String) {
         #if targetEnvironment(simulator)
         return
         #else
-        //doesn't work on simulator, seems to be buggy
+        // doesn't work on simulator, seems to be buggy
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 read(content)
             }
         #endif
     }
-    
+
     func nextContent() -> Content {
         return generator.nextContent()
     }

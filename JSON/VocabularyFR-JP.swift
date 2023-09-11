@@ -1,4 +1,4 @@
-
+// swiftlint:disable identifier_name file_length
 let fr_jp = """
 [
   {
@@ -3343,4 +3343,3 @@ let fr_jp = """
   }
 ]
 """.data(using: .utf8)
-
