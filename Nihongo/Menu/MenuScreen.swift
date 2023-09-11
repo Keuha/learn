@@ -11,43 +11,33 @@ import Combine
 struct MenuScreen: View {
 
     var body: some View {
-    NavigationStack {
-        ZStack {
-            Color.Custom.bordeau.ignoresSafeArea()
+        NavigationStack {
             VStack {
-                HStack {
-                    Spacer()
-                    NavigableMenuButton(destination: { VocabularyDisplay() },
-                                        buttonContent: {
-                        ButtonContent {
-                            SuitableText("単語", fontSize: .title)
-                            SuitableText("たんご", fontSize: .subtitle)
-                            SuitableText("vocabulaire")
-                        }
-                    })
-                    Spacer()
-                    NavigableVoiceMenuButton()
-                }
-                    Spacer()
-                }.frame(maxWidth: .infinity)
-                VStack {
-                    Button(action: {}, label: {
-                        ButtonContent {
-                            SuitableText("文法", fontSize: .title)
-                            SuitableText("ぶんぽう", fontSize: .subtitle)
-                            SuitableText("grammaire")
-                        }
-                    })
-                    .buttonStyle(.bordered)
-                    Button(action: {}, label: {
-                        ButtonContent {
-                            SuitableText("メニュー ", fontSize: .title)
-                            SuitableText("menu")
-                        }
-                    })
-                    .buttonStyle(.bordered)
-                }
+                NavigableMenuButton(destination: { VocabularyDisplay() },
+                                    buttonContent: {
+                    ButtonContent {
+                        SuitableText("単語", fontSize: .caption)
+                        SuitableText("たんご", fontSize: .subtitle).padding(2)
+                        SuitableText("vocabulaire")
+                    }
+                })
+                NavigableVoiceMenuButton()
+                Button(action: {}, label: {
+                    ButtonContent {
+                        SuitableText("文法", fontSize: .caption)
+                        SuitableText("ぶんぽう", fontSize: .subtitle).padding(2)
+                        SuitableText("grammaire")
+                    }
+                })
+                Button(action: {}, label: {
+                    ButtonContent {
+                        SuitableText("メニュー ", fontSize: .caption)
+                        SuitableText("menu")
+                    }
+                })
             }
+            .padding(.all)
+            .buttonStyle(.bordered)
         }
     }
 }
