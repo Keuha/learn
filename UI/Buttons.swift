@@ -17,7 +17,6 @@ struct ButtonContent<Content: View>: ContainerView {
                 content()
             }
             .foregroundColor(.black)
-            .padding()
-        }
+        }.padding()
     }
 }
