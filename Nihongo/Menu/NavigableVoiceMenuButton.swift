@@ -16,11 +16,7 @@ struct NavigableVoiceMenuButton: View {
     
     var body: some View {
         NavigationStack {
-            ButtonContent {
-                SuitableText("話す", fontSize: .title)
-                SuitableText("はなす", fontSize: .subtitle)
-                SuitableText("parler")
-            }.onTapGesture {
+            Button(action: {
                 model.requestVocalAccess()
                 model.$vocalAccess
                     .receive(on: RunLoop.main)
@@ -32,20 +28,30 @@ struct NavigableVoiceMenuButton: View {
                             break
                         }
                     }.store(in: &model.cancellables)
+            }) {
+                ButtonContent {
+                    SuitableText("話す", fontSize: .caption)
+                    SuitableText("はなす", fontSize: .subtitle).padding(2)
+                    SuitableText("parler")
+                }
             }
         }
         .navigationDestination(isPresented: $navigate,
-                               destination: { VoiceRecognitionDisplay() })
+                               destination: {
+            VoiceRecognitionDisplay()
+        })
         .navigationDestination(isPresented: $optionModalDisplay,
                                destination: { EmptyView() })
     }
         
     func determineNavigation(_ status: AuthorizationStatus) {
-        switch status {
-        case .granted:
-            navigate = true
-        default:
-            optionModalDisplay = true
+        DispatchQueue.main.async {
+            switch status {
+            case .granted:
+                navigate = true
+            default:
+                optionModalDisplay = true
+            }
         }
     }
 }
