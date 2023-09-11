@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "9644D417-DAC8-484D-80D8-93F0DACC6ECA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Nihongo.xcodeproj",
+      "identifier" : "956875E92A8A1DBA004C5446",
+      "name" : "Nihongo"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Nihongo.xcodeproj",
+        "identifier" : "956875F92A8A1DC1004C5446",
+        "name" : "NihongoTests"
+      }
+    }
+  ],
+  "version" : 1
+}

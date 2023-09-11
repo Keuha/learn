@@ -12,7 +12,7 @@ struct NihongoApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                VocabularyDisplay()
+                WelcomeScreen()
             }
         }
     }
