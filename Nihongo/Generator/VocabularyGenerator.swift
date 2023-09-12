@@ -9,27 +9,23 @@ import Foundation
 import Combine
 import SwiftUI
 
-struct Content: Codable, Equatable, Hashable {
-    var kanji: String = ""
-    var translation: String = ""
-    var hiragana: String = ""
-}
-
 class VocabularyGenerator: ContentGenerator, ObservableObject {
-    private var content: [Content] = []
-    private var previouslyGeneratedContent: [Content] = []
-    @Published var generatedContent: [Content] = []
+    private var content: [GeneratedContent] = []
+    private var previouslyGeneratedContent: [GeneratedContent] = []
+    @Published var generatedContent: [GeneratedContent] = []
     init() {
         guard let data = fr_jp else { fatalError("no data") }
-        guard let decoded = try? JSONDecoder().decode([Content].self, from: data) else { fatalError("can't decode") }
+        guard let decoded = try? JSONDecoder().decode([GeneratedContent].self, from: data) else {
+            fatalError("can't decode")
+        }
         content = decoded
         generateContent()
     }
 
     func generateContent() {
         // get only non already used content
-        let unique: [Content] = Array(Set([content, previouslyGeneratedContent].flatMap { $0 }))
-        var newContent: [Content] = []
+        let unique: [GeneratedContent] = Array(Set([content, previouslyGeneratedContent].flatMap { $0 }))
+        var newContent: [GeneratedContent] = []
         for _ in 0...24 {
             if let content = unique.randomElement() {
                 newContent.append(content)
@@ -38,7 +34,7 @@ class VocabularyGenerator: ContentGenerator, ObservableObject {
         generatedContent = newContent
     }
 
-    func nextContent() -> Content {
+    func nextContent() -> GeneratedContent {
         let content = generatedContent.removeFirst()
         previouslyGeneratedContent.append(content)
         if generatedContent.count == 0 {
@@ -49,6 +45,6 @@ class VocabularyGenerator: ContentGenerator, ObservableObject {
 }
 
 protocol ContentGenerator {
-    var generatedContent: [Content] { get }
-    func nextContent() -> Content
+    var generatedContent: [GeneratedContent] { get }
+    func nextContent() -> GeneratedContent
 }

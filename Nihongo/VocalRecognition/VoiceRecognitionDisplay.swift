@@ -69,7 +69,7 @@ class VoiceRecognitionDisplayViewModel: ObservableObject {
     private var generator: ContentGenerator
     private var voiceTranscriber: VoiceTranscription
     private var cancellables: Set<AnyCancellable> = []
-    @Published var content: Content!
+    @Published var content: GeneratedContent!
     @Published var said: String = ""
     @Published var isListening: Bool = false
 
