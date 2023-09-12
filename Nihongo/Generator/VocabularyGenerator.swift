@@ -21,7 +21,8 @@ class VocabularyGenerator: ContentGenerator, ObservableObject {
     @Published var generatedContent: [Content] = []
     init() {
         guard let data = fr_jp else { fatalError("no data") }
-        guard let content = try? JSONDecoder().decode([Content].self, from: data) else { fatalError("can't decode") }
+        guard let decoded = try? JSONDecoder().decode([Content].self, from: data) else { fatalError("can't decode") }
+        content = decoded
         generateContent()
     }
 

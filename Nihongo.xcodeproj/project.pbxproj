@@ -37,6 +37,35 @@
 		95B2C5992A923B69009A4370 /* VocabularyDisplayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C5982A923B69009A4370 /* VocabularyDisplayViewModelTests.swift */; };
 		95B2C59B2A923C29009A4370 /* StubTextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C59A2A923C29009A4370 /* StubTextReader.swift */; };
 		95B2C59D2A923C97009A4370 /* StubContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */; };
+		95B68ED62AB04B68002AF70E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9862A8B6364006DD5E5 /* Buttons.swift */; };
+		95B68ED72AB04B68002AF70E /* NavigableVoiceMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB26B02A9B575A00C0C159 /* NavigableVoiceMenuButton.swift */; };
+		95B68ED82AB04B68002AF70E /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F852A8CB5C600953FA2 /* FontSize.swift */; };
+		95B68ED92AB04B68002AF70E /* VocabularyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */; };
+		95B68EDA2AB04B68002AF70E /* VoiceAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */; };
+		95B68EDB2AB04B68002AF70E /* VocabularyFR-JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F8A2A8DFE0700953FA2 /* VocabularyFR-JP.swift */; };
+		95B68EDC2AB04B68002AF70E /* VocabularyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F8C2A8DFFBB00953FA2 /* VocabularyGenerator.swift */; };
+		95B68EDD2AB04B68002AF70E /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9C2A98B59F0072DECE /* CancelBag.swift */; };
+		95B68EDE2AB04B68002AF70E /* VoiceRecognitionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */; };
+		95B68EDF2AB04B68002AF70E /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9812A8A6620006DD5E5 /* MenuScreen.swift */; };
+		95B68EE02AB04B68002AF70E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9842A8B623E006DD5E5 /* Colors.swift */; };
+		95B68EE12AB04B68002AF70E /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F872A8CBF7900953FA2 /* Reader.swift */; };
+		95B68EE22AB04B68002AF70E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F97C2A8A517F006DD5E5 /* Fonts.swift */; };
+		95B68EE32AB04B68002AF70E /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9A2A9892660072DECE /* Loadable.swift */; };
+		95B68EE42AB04B68002AF70E /* NavigableMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE982A988F3E0072DECE /* NavigableMenuButton.swift */; };
+		95B68EE52AB04B68002AF70E /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9882A8B66C4006DD5E5 /* ContainerView.swift */; };
+		95B68EE62AB04B68002AF70E /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875EF2A8A1DBA004C5446 /* WelcomeScreen.swift */; };
+		95B68EE72AB04B68002AF70E /* VoiceTranscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A29472AA9B040001AEFFC /* VoiceTranscription.swift */; };
+		95B68EE82AB04B68002AF70E /* NihongoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956875ED2A8A1DBA004C5446 /* NihongoApp.swift */; };
+		95B68EE92AB04B68002AF70E /* VoiceTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */; };
+		95B68EEA2AB04B68002AF70E /* SuitableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9782A8A479B006DD5E5 /* SuitableText.swift */; };
+		95B68EEB2AB04B68002AF70E /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */; };
+		95B68EEE2AB04B68002AF70E /* QuicksandLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F9692A8A2956006DD5E5 /* QuicksandLight.otf */; };
+		95B68EEF2AB04B68002AF70E /* QuicksandObliqueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96C2A8A2956006DD5E5 /* QuicksandObliqueLight.otf */; };
+		95B68EF02AB04B68002AF70E /* QuicksandRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96B2A8A2956006DD5E5 /* QuicksandRegular.otf */; };
+		95B68EF12AB04B68002AF70E /* YS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9589F9702A8A2A1C006DD5E5 /* YS.TTF */; };
+		95B68EF22AB04B68002AF70E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F42A8A1DC1004C5446 /* Preview Assets.xcassets */; };
+		95B68EF32AB04B68002AF70E /* QuicksandObliqueRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9589F96A2A8A2956006DD5E5 /* QuicksandObliqueRegular.otf */; };
+		95B68EF42AB04B68002AF70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956875F12A8A1DC1004C5446 /* Assets.xcassets */; };
 		95BB26B12A9B575A00C0C159 /* NavigableVoiceMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB26B02A9B575A00C0C159 /* NavigableVoiceMenuButton.swift */; };
 		95C0F73E2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */; };
 		95C0F7412A936296009D5B0E /* VoiceAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */; };
@@ -89,6 +118,8 @@
 		95B2C59A2A923C29009A4370 /* StubTextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTextReader.swift; sourceTree = "<group>"; };
 		95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubContentGenerator.swift; sourceTree = "<group>"; };
 		95B68ECD2AAF5735002AF70E /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		95B68EF82AB04B68002AF70E /* NihongoCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NihongoCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B68EF92AB04B68002AF70E /* Nihongo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Nihongo copy-Info.plist"; path = "/Users/franck/Dev/Nihongo/Nihongo copy-Info.plist"; sourceTree = "<absolute>"; };
 		95BB26B02A9B575A00C0C159 /* NavigableVoiceMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableVoiceMenuButton.swift; sourceTree = "<group>"; };
 		95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionDisplay.swift; sourceTree = "<group>"; };
 		95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAuthorization.swift; sourceTree = "<group>"; };
@@ -111,6 +142,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95B68EEC2AB04B68002AF70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,6 +162,7 @@
 				956875EC2A8A1DBA004C5446 /* Nihongo */,
 				956875FD2A8A1DC1004C5446 /* NihongoTests */,
 				956875EB2A8A1DBA004C5446 /* Products */,
+				95B68EF92AB04B68002AF70E /* Nihongo copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +171,7 @@
 			children = (
 				956875EA2A8A1DBA004C5446 /* Nihongo.app */,
 				956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */,
+				95B68EF82AB04B68002AF70E /* NihongoCI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,7 +362,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 956876112A8A1DC2004C5446 /* Build configuration list for PBXNativeTarget "NihongoTests" */;
 			buildPhases = (
-				95B68ECE2AAF577C002AF70E /* Swiftlint */,
 				956875F62A8A1DC1004C5446 /* Sources */,
 				956875F72A8A1DC1004C5446 /* Frameworks */,
 				956875F82A8A1DC1004C5446 /* Resources */,
@@ -336,6 +375,25 @@
 			productName = NihongoTests;
 			productReference = 956875FA2A8A1DC1004C5446 /* NihongoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95B68ED32AB04B68002AF70E /* NihongoCI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95B68EF52AB04B68002AF70E /* Build configuration list for PBXNativeTarget "NihongoCI" */;
+			buildPhases = (
+				95B68ED52AB04B68002AF70E /* Sources */,
+				95B68EEC2AB04B68002AF70E /* Frameworks */,
+				95B68EED2AB04B68002AF70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NihongoCI;
+			packageProductDependencies = (
+			);
+			productName = Nihongo;
+			productReference = 95B68EF82AB04B68002AF70E /* NihongoCI.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -374,6 +432,7 @@
 			targets = (
 				956875E92A8A1DBA004C5446 /* Nihongo */,
 				956875F92A8A1DC1004C5446 /* NihongoTests */,
+				95B68ED32AB04B68002AF70E /* NihongoCI */,
 			);
 		};
 /* End PBXProject section */
@@ -400,28 +459,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		95B68ECE2AAF577C002AF70E /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
+		95B68EED2AB04B68002AF70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
+				95B68EEE2AB04B68002AF70E /* QuicksandLight.otf in Resources */,
+				95B68EEF2AB04B68002AF70E /* QuicksandObliqueLight.otf in Resources */,
+				95B68EF02AB04B68002AF70E /* QuicksandRegular.otf in Resources */,
+				95B68EF12AB04B68002AF70E /* YS.TTF in Resources */,
+				95B68EF22AB04B68002AF70E /* Preview Assets.xcassets in Resources */,
+				95B68EF32AB04B68002AF70E /* QuicksandObliqueRegular.otf in Resources */,
+				95B68EF42AB04B68002AF70E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-/* End PBXShellScriptBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		956875E62A8A1DBA004C5446 /* Sources */ = {
@@ -463,6 +515,35 @@
 				95B2C5992A923B69009A4370 /* VocabularyDisplayViewModelTests.swift in Sources */,
 				958A294E2AA9B664001AEFFC /* VocalRecognitionViewModelTests.swift in Sources */,
 				95B2C59B2A923C29009A4370 /* StubTextReader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95B68ED52AB04B68002AF70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B68ED62AB04B68002AF70E /* Buttons.swift in Sources */,
+				95B68ED72AB04B68002AF70E /* NavigableVoiceMenuButton.swift in Sources */,
+				95B68ED82AB04B68002AF70E /* FontSize.swift in Sources */,
+				95B68ED92AB04B68002AF70E /* VocabularyDisplay.swift in Sources */,
+				95B68EDA2AB04B68002AF70E /* VoiceAuthorization.swift in Sources */,
+				95B68EDB2AB04B68002AF70E /* VocabularyFR-JP.swift in Sources */,
+				95B68EDC2AB04B68002AF70E /* VocabularyGenerator.swift in Sources */,
+				95B68EDD2AB04B68002AF70E /* CancelBag.swift in Sources */,
+				95B68EDE2AB04B68002AF70E /* VoiceRecognitionDisplay.swift in Sources */,
+				95B68EDF2AB04B68002AF70E /* MenuScreen.swift in Sources */,
+				95B68EE02AB04B68002AF70E /* Colors.swift in Sources */,
+				95B68EE12AB04B68002AF70E /* Reader.swift in Sources */,
+				95B68EE22AB04B68002AF70E /* Fonts.swift in Sources */,
+				95B68EE32AB04B68002AF70E /* Loadable.swift in Sources */,
+				95B68EE42AB04B68002AF70E /* NavigableMenuButton.swift in Sources */,
+				95B68EE52AB04B68002AF70E /* ContainerView.swift in Sources */,
+				95B68EE62AB04B68002AF70E /* WelcomeScreen.swift in Sources */,
+				95B68EE72AB04B68002AF70E /* VoiceTranscription.swift in Sources */,
+				95B68EE82AB04B68002AF70E /* NihongoApp.swift in Sources */,
+				95B68EE92AB04B68002AF70E /* VoiceTranscriber.swift in Sources */,
+				95B68EEA2AB04B68002AF70E /* SuitableText.swift in Sources */,
+				95B68EEB2AB04B68002AF70E /* AuthorizationRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +790,73 @@
 			};
 			name = Release;
 		};
+		95B68EF62AB04B68002AF70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nihongo/Preview Content\"";
+				DEVELOPMENT_TEAM = 932U5M7YW2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nihongo copy-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Nihongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95B68EF72AB04B68002AF70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nihongo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nihongo copy-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Nihongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -735,6 +883,15 @@
 			buildConfigurations = (
 				956876122A8A1DC2004C5446 /* Debug */,
 				956876132A8A1DC2004C5446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95B68EF52AB04B68002AF70E /* Build configuration list for PBXNativeTarget "NihongoCI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B68EF62AB04B68002AF70E /* Debug */,
+				95B68EF72AB04B68002AF70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

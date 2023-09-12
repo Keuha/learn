@@ -16,7 +16,7 @@ struct WelcomeScreen: View {
 
     var body: some View {
         ZStack {
-            Color.custom.blue.ignoresSafeArea()
+            Color.Custom.blue.ignoresSafeArea()
             if navigate {
                 MenuScreen()
             } else {
