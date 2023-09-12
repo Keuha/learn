@@ -28,20 +28,22 @@ struct NavigableVoiceMenuButton: View {
                             break
                         }
                     }.store(in: &model.cancellables)
-            }) {
+            }, label: {
                 ButtonContent {
                     SuitableText("話す", fontSize: .caption)
                     SuitableText("はなす", fontSize: .subtitle).padding(2)
                     SuitableText("parler")
                 }
-            }
+            })
         }
         .navigationDestination(isPresented: $navigate,
                                destination: {
             VoiceRecognitionDisplay()
         })
         .navigationDestination(isPresented: $optionModalDisplay,
-                               destination: { EmptyView() })
+                               destination: {
+            EmptyView()
+        })
     }
 
     func determineNavigation(_ status: AuthorizationStatus) {
@@ -49,6 +51,8 @@ struct NavigableVoiceMenuButton: View {
             switch status {
             case .granted:
                 navigate = true
+            case .undetermined:
+                model.requestVocalAccess()
             default:
                 optionModalDisplay = true
             }
@@ -72,11 +76,6 @@ class NavigableVoiceMenuButtonViewModel: ObservableObject {
     }
 
     func requestVocalAccess() {
-        switch vocalAccess {
-        case .notRequested:
-            authorizationRequest.requestAuthorization()
-        default:
-            break
-        }
+        authorizationRequest.requestAuthorization()
     }
 }

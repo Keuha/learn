@@ -29,7 +29,8 @@ struct MenuScreen: View {
                         SuitableText("grammaire")
                     }
                 })
-                Button(action: {}, label: {
+                NavigableMenuButton(destination: { SettingsView() },
+                                    buttonContent: {
                     ButtonContent {
                         SuitableText("メニュー ", fontSize: .caption)
                         SuitableText("menu")
