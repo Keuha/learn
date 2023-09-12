@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct MenuScreen: View {
-    
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -22,19 +22,19 @@ struct MenuScreen: View {
                     }
                 })
                 NavigableVoiceMenuButton()
-                Button(action: {}) {
+                Button(action: {}, label: {
                     ButtonContent {
                         SuitableText("文法", fontSize: .caption)
                         SuitableText("ぶんぽう", fontSize: .subtitle).padding(2)
                         SuitableText("grammaire")
                     }
-                }
-                Button(action: {}) {
+                })
+                Button(action: {}, label: {
                     ButtonContent {
                         SuitableText("メニュー ", fontSize: .caption)
                         SuitableText("menu")
                     }
-                }
+                })
             }
             .padding(.all)
             .buttonStyle(.bordered)

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum FontSize: CGFloat {
     case title = 42
     case subtitle = 18

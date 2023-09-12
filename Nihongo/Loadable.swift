@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import Combine
 
 enum CustomError: Error {
@@ -15,23 +13,23 @@ enum CustomError: Error {
 }
 
 enum Loadable<Value> {
-    
+
     case notRequested
     case loading(Value?, CancelBag)
     case loaded(Value)
     case error(Error)
-    
+
     var value: Value? {
         switch self {
-            case let .loaded(value):
-                return value
-            case let .loading(last, _):
-                return last
-            default: return nil
+        case let .loaded(value):
+            return value
+        case let .loading(last, _):
+            return last
+        default: return nil
         }
     }
-    
-    var notRequested : Bool {
+
+    var notRequested: Bool {
         switch self {
         case .notRequested:
             return true

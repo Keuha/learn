@@ -10,12 +10,12 @@ import SwiftUI
 import Combine
 
 struct VoiceRecognitionDisplay: View {
-   
+
     @ObservedObject var model = VoiceRecognitionDisplayViewModel()
-    
+
     var body: some View {
         ZStack {
-            Color.custom.blue.ignoresSafeArea()
+            Color.Custom.blue.ignoresSafeArea()
             VStack {
                 Spacer()
                 readBlock
@@ -28,17 +28,14 @@ struct VoiceRecognitionDisplay: View {
             model.stopMicrophone()
         }
     }
-    
-    @ViewBuilder var micButton : some View {
-        Button(action: {
-          
-            
-        }) {
+
+    @ViewBuilder var micButton: some View {
+        Button(action: {}, label: {
             Image(systemName: model.isListening ? "mic.fill" : "mic")
                 .font(.title)
                 .imageScale(.large)
                 .colorInvert()
-        }
+        })
         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
                 .onChanged({ _ in
@@ -53,10 +50,10 @@ struct VoiceRecognitionDisplay: View {
         .colorInvert()
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
-        .foregroundColor(model.isListening ? Color.custom.brown : Color.custom.red)
+        .foregroundColor(model.isListening ? Color.Custom.brown : Color.Custom.red)
     }
-    
-    @ViewBuilder var readBlock : some View {
+
+    @ViewBuilder var readBlock: some View {
         Group {
             VStack {
                 SuitableText(model.content.kanji, fontSize: .title)
@@ -65,7 +62,6 @@ struct VoiceRecognitionDisplay: View {
                 SuitableText(model.content.translation)
             }.padding()
         }
-        
     }
 }
 
@@ -76,8 +72,9 @@ class VoiceRecognitionDisplayViewModel: ObservableObject {
     @Published var content: Content!
     @Published var said: String = ""
     @Published var isListening: Bool = false
-    
-    init(generator: ContentGenerator = VocabularyGenerator(), voiceTranscriber: VoiceTranscription = VoiceTranscriber()) {
+
+    init(generator: ContentGenerator = VocabularyGenerator(),
+         voiceTranscriber: VoiceTranscription = VoiceTranscriber()) {
         self.generator = generator
         self.content = generator.nextContent()
         self.voiceTranscriber = voiceTranscriber
@@ -92,20 +89,19 @@ class VoiceRecognitionDisplayViewModel: ObservableObject {
             }
         }.store(in: &cancellables)
     }
-   
-    
+
     func startMicrophone() {
         if voiceTranscriber.isUsed == false {
             isListening = true
             voiceTranscriber.startSession()
         }
     }
-    
+
     func stopMicrophone() {
         voiceTranscriber.stopSession()
         isListening = false
     }
-    
+
     private func compareResult(_ vocal: String) {
         said = vocal
         if vocal == content.hiragana {
@@ -114,7 +110,7 @@ class VoiceRecognitionDisplayViewModel: ObservableObject {
             impactHeavy.impactOccurred()
         }
     }
-    
+
     private func nextContent() {
         content = generator.nextContent()
     }

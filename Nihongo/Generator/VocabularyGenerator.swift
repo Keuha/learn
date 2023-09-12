@@ -16,20 +16,19 @@ struct Content: Codable, Equatable, Hashable {
 }
 
 class VocabularyGenerator: ContentGenerator, ObservableObject {
-    
     private var content: [Content] = []
     private var previouslyGeneratedContent: [Content] = []
     @Published var generatedContent: [Content] = []
-    
     init() {
         guard let data = fr_jp else { fatalError("no data") }
-        content = try! JSONDecoder().decode([Content].self, from: data)
+        guard let decoded = try? JSONDecoder().decode([Content].self, from: data) else { fatalError("can't decode") }
+        content = decoded
         generateContent()
     }
-    
-    
+
     func generateContent() {
-        let unique: [Content] = Array(Set([content, previouslyGeneratedContent].flatMap { $0 })) // get only non already used content
+        // get only non already used content
+        let unique: [Content] = Array(Set([content, previouslyGeneratedContent].flatMap { $0 }))
         var newContent: [Content] = []
         for _ in 0...24 {
             if let content = unique.randomElement() {
@@ -38,7 +37,7 @@ class VocabularyGenerator: ContentGenerator, ObservableObject {
         }
         generatedContent = newContent
     }
-    
+
     func nextContent() -> Content {
         let content = generatedContent.removeFirst()
         previouslyGeneratedContent.append(content)
@@ -48,7 +47,6 @@ class VocabularyGenerator: ContentGenerator, ObservableObject {
         return content
     }
 }
-
 
 protocol ContentGenerator {
     var generatedContent: [Content] { get }

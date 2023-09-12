@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    enum custom {
+    enum Custom {
         static var beige = Color("beige", bundle: nil)
         static var blue = Color("blue", bundle: nil)
         static var red = Color("red", bundle: nil)

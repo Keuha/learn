@@ -7,13 +7,12 @@
 
 import Foundation
 
-enum customFonts: String {
-    enum quicksand: String {
+enum CustomFonts: String {
+    enum Quicksand: String {
         case light = "QuicksandLight-Regular"
         case lightOblique = "QuicksandLightOblique-Regular"
         case regular = "QuicksandBook-Regular"
         case regularOblique = "QuicksandBookOblique-Regular"
     }
-    
-    case YS = "YS_handy_writing"
+    case YSFont = "YS_handy_writing"
 }

@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 struct NavigableVoiceMenuButton: View {
-    
+
     var model = NavigableVoiceMenuButtonViewModel()
     @State var navigate = false
     @State var optionModalDisplay = false
-    
+
     var body: some View {
         NavigationStack {
             Button(action: {
@@ -43,7 +43,7 @@ struct NavigableVoiceMenuButton: View {
         .navigationDestination(isPresented: $optionModalDisplay,
                                destination: { EmptyView() })
     }
-        
+
     func determineNavigation(_ status: AuthorizationStatus) {
         DispatchQueue.main.async {
             switch status {
@@ -56,13 +56,12 @@ struct NavigableVoiceMenuButton: View {
     }
 }
 
+class NavigableVoiceMenuButtonViewModel: ObservableObject {
 
-class NavigableVoiceMenuButtonViewModel : ObservableObject {
-    
     var authorizationRequest: AuthorizationRequest
     var cancellables: Set<AnyCancellable> = []
     @Published var vocalAccess: Loadable<AuthorizationStatus> = .notRequested
-    
+
     init(_ authorizationRequest: AuthorizationRequest = VoiceAuthorization()) {
         self.authorizationRequest = authorizationRequest
         authorizationRequest.statusPublisher
@@ -71,13 +70,13 @@ class NavigableVoiceMenuButtonViewModel : ObservableObject {
                 self.vocalAccess = status
         }.store(in: &cancellables)
     }
-    
+
     func requestVocalAccess() {
-         switch vocalAccess {
-            case .notRequested:
-                authorizationRequest.requestAuthorization()
-            default:
-                break
+        switch vocalAccess {
+        case .notRequested:
+            authorizationRequest.requestAuthorization()
+        default:
+            break
         }
     }
 }
