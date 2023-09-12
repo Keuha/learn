@@ -10,11 +10,11 @@
 import Foundation
 
 class StubContentGenerator: ContentGenerator {
-    var generatedContent = [Content(kanji: "foo", translation: "test", hiragana: "bar")]
+    var generatedContent = [GeneratedContent(kanji: "foo", translation: "test", hiragana: "bar")]
     var nextContentHasBeenCalled = false
     var nextContentHasBeenCalledXTime = 0
     
-    func nextContent() -> Nihongo.Content {
+    func nextContent() -> Nihongo.GeneratedContent {
         nextContentHasBeenCalled = true
         nextContentHasBeenCalledXTime += 1
         return generatedContent.first!
