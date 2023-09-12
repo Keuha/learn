@@ -9,31 +9,22 @@ import SwiftUI
 import AVFoundation
 
 struct VocabularyDisplay: View {
-
+    @Injected(\.settingsProvider) private var settings
     @State private var reveal = false
     @State private var opacity = 0.0
-    @State private var content = Content()
+    @State private var content: GeneratedContent?
     var model = VocabularyDisplayViewModel()
 
     var body: some View {
         ZStack {
             Color.Custom.beige.ignoresSafeArea()
-            VStack {
-                Spacer()
-                readBlock
-                translationBlock
-                Spacer()
-            }
+            displayContent
         }.onAppear {
             content = model.nextContent()
         }
         .onTapGesture {
             withAnimation {
-                if reveal == false {
-                    model.readLater(content.hiragana)
-                    reveal = true
-                    opacity = 1.0
-                }
+                animate()
             }
         }
     }
@@ -41,6 +32,36 @@ struct VocabularyDisplay: View {
     func next() {
         reveal.toggle()
         content = model.nextContent()
+    }
+
+    func animate() {
+        if reveal == false {
+            if let content = content {
+                model.readLater(content.hiragana)
+            }
+            reveal = true
+            opacity = 1.0
+        }
+    }
+
+    @ViewBuilder var displayContent: some View {
+        VStack {
+            Spacer()
+            if content != nil {
+                readBlock
+                translationBlock
+            } else {
+                congratulation
+            }
+            Spacer()
+        }
+    }
+
+    @ViewBuilder var congratulation: some View {
+        SuitableText("おめでとう", fontSize: .title)
+        SuitableText("お目出度う", fontSize: .subtitle)
+        SuitableText("Congratulation").padding()
+        SuitableText("you're done for today")
     }
 
     @ViewBuilder var translationBlock: some View {
@@ -53,37 +74,48 @@ struct VocabularyDisplay: View {
     }
 
     @ViewBuilder var translationContent: some View {
-        Group {
-            Image(systemName: "speaker.wave.2")
-                .onTapGesture {
-                    model.read(content.hiragana)
+        if let content = content {
+            Group {
+                Image(systemName: "speaker.wave.2")
+                    .onTapGesture {
+                        model.read(content.hiragana)
+                    }
+                    .padding()
+                SuitableText(content.translation)
+                    .onTapGesture {
+                        model.read(content.hiragana)
+                    }
+                    .padding()
+                SuitableText("suivant", fontSize: .subtitle).onTapGesture {
+                    next()
                 }
-                .padding()
-            SuitableText(content.translation)
-                .onTapGesture {
-                    model.read(content.hiragana)
-                }
-                .padding()
-            SuitableText("suivant", fontSize: .subtitle).onTapGesture {
-                next()
             }
         }
     }
 
     @ViewBuilder var readBlock: some View {
-        Group {
-            VStack {
-                SuitableText(content.kanji, fontSize: .title)
-                    .padding()
-                SuitableText(content.hiragana, fontSize: .subtitle)
-            }.padding()
+        if let content = content {
+            Group {
+                VStack {
+                    if content.kanji.isEmpty == false {
+                        SuitableText(content.kanji, fontSize: .title)
+                            .padding()
+                        SuitableText(content.hiragana, fontSize: .subtitle)
+                            .opacity((settings.hiraganaDisplay || self.reveal) ? 1 : 0)
+                    } else {
+                        SuitableText(content.hiragana, fontSize: .title)
+                    }
+                }.padding()
+            }
         }
     }
 }
 
-struct VocabularyDisplayViewModel {
+class VocabularyDisplayViewModel {
     private let reader: TextReader
     private var generator: ContentGenerator
+    private var generated = 0
+    @Injected(\.settingsProvider) private var settings
 
     init(generator: ContentGenerator = VocabularyGenerator(), reader: TextReader = TextToSpeach()) {
         self.generator = generator
@@ -105,7 +137,11 @@ struct VocabularyDisplayViewModel {
         #endif
     }
 
-    func nextContent() -> Content {
+    func nextContent() -> GeneratedContent? {
+        if generated == settings.numberOfDisplay {
+            return nil
+        }
+        generated += 1
         return generator.nextContent()
     }
 }
