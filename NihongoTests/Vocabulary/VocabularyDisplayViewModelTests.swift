@@ -10,9 +10,8 @@ import XCTest
 
 final class VocabularyModelTests: XCTestCase {
     
-    
     private func setNumberOfDisplay(_ to: Int = 5) {
-        @Injected(\.settingsProvider) var settings
+        @Injected(\.settingsProvider) var settings: Settings
         settings.numberOfDisplay = to
     }
     
