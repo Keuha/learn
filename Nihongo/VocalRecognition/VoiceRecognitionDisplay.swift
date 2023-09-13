@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 import Combine
+import SwiftSpeech
 
 struct VoiceRecognitionDisplay: View {
 
     @ObservedObject var model = VoiceRecognitionDisplayViewModel()
-
+    @State var said: String = ""
+    private var cancelBag = CancelBag()
     var body: some View {
         ZStack {
             Color.Custom.blue.ignoresSafeArea()
@@ -20,37 +22,28 @@ struct VoiceRecognitionDisplay: View {
                 Spacer()
                 readBlock
                 Spacer()
-                SuitableText(model.said)
-                micButton
+                SuitableText(said, fontSize: .caption)
+                micButton.padding()
+                ButtonContent {
+                    Button(action: model.nextContent) {
+                        Text("skip→")
+                    }
+                }
                 Spacer()
             }
-        }.onDisappear {
-            model.stopMicrophone()
         }
     }
 
     @ViewBuilder var micButton: some View {
-        Button(action: {}, label: {
-            Image(systemName: model.isListening ? "mic.fill" : "mic")
-                .font(.title)
-                .imageScale(.large)
-                .colorInvert()
-        })
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged({ _ in
-                    model.startMicrophone()
-                })
-                .onEnded({ _ in
-                    model.stopMicrophone()
-                    let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
-                    impactHeavy.impactOccurred()
-                })
-        )
+        SwiftSpeech.CustomRecordButton()
+            .swiftSpeechRecordOnHold(locale: Locale(identifier: "ja_JP"))
+            .onRecognizeLatest(handleResult: { session in
+                said = session.bestTranscription.formattedString
+                checkValues()
+            }, handleError: { _ in })
         .colorInvert()
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
-        .foregroundColor(model.isListening ? Color.Custom.brown : Color.Custom.red)
     }
 
     @ViewBuilder var readBlock: some View {
@@ -63,61 +56,36 @@ struct VoiceRecognitionDisplay: View {
             }.padding()
         }
     }
+
+    func checkValues() {
+        if model.compareResult(said) {
+            said = ""
+        }
+    }
 }
 
 class VoiceRecognitionDisplayViewModel: ObservableObject {
     private var generator: ContentGenerator
-    private var voiceTranscriber: VoiceTranscription
-    private var cancellables: Set<AnyCancellable> = []
     @Published var content: GeneratedContent!
-    @Published var said: String = ""
-    @Published var isListening: Bool = false
 
-    init(generator: ContentGenerator = VocabularyGenerator(),
-         voiceTranscriber: VoiceTranscription = VoiceTranscriber()) {
+    init(generator: ContentGenerator = VocabularyGenerator()) {
         self.generator = generator
         self.content = generator.nextContent()
-        self.voiceTranscriber = voiceTranscriber
-        self.voiceTranscriber.transcribtionPublisher
-            .receive(on: RunLoop.main)
-            .sink { [weak self] (status) in
-                switch status {
-                case .loaded(let vocal):
-                    self?.compareResult(vocal)
-                default:
-                    break
-            }
-        }.store(in: &cancellables)
     }
 
-    func startMicrophone() {
-        if voiceTranscriber.isUsed == false {
-            isListening = true
-            voiceTranscriber.startSession()
-        }
-    }
-
-    func stopMicrophone() {
-        voiceTranscriber.stopSession()
-        isListening = false
-    }
-
-    private func compareResult(_ vocal: String) {
-        said = vocal
-        if vocal == content.hiragana {
-            nextContent()
+    func compareResult(_ said: String) -> Bool {
+        if said == content.hiragana || said == content.kanji {
             let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
             impactHeavy.impactOccurred()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.nextContent()
+            }
+            return true
         }
+        return false
     }
 
-    private func nextContent() {
+    func nextContent() {
         content = generator.nextContent()
-    }
-}
-
-struct VoiceRecognitionDisplay_Previews: PreviewProvider {
-    static var previews: some View {
-        VoiceRecognitionDisplay()
     }
 }
