@@ -11,6 +11,8 @@ import SwiftUI
 struct Settings {
     @AppStorage("numberOfDisplay") var numberOfDisplay: Int = 25
     @AppStorage("hiraganaDisplay") var hiraganaDisplay: Bool = true
+    @AppStorage("voiceKanjiDisplay") var voiceKanjiDisplay: Bool = true
+    @AppStorage("voiceHiraganaDisplay") var voiceHiraganaDisplay: Bool = true
 }
 
 private struct SettingsKey: InjectionKey {

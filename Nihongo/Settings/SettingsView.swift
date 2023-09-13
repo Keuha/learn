@@ -20,8 +20,14 @@ struct SettingsView: View {
                     SuitableText("menu")
                 }.buttonStyle(.bordered)
                 List {
-                    numberOfCard
-                    hiraganaDisplay
+                    Section(header: Text("Vocabulary")) {
+                        numberOfCard
+                        hiraganaDisplay
+                    }
+                    Section(header: Text("Voice training")) {
+                        voiceKanjiDisplay
+                        voiceHiraganaDisplay
+                    }
                 }
                 .scrollContentBackground(.hidden)
                 .scrollDisabled(true)
@@ -48,7 +54,23 @@ struct SettingsView: View {
 
     var hiraganaDisplay: some View {
         HStack {
-            Toggle("number of cards to review", isOn: settings.$hiraganaDisplay)
+            Toggle("should display Hiragana / Katakana", isOn: settings.$hiraganaDisplay)
+                .padding(.bottom)
+                .padding(.top)
+        }
+    }
+
+    var voiceKanjiDisplay: some View {
+        HStack {
+            Toggle("should display Kanji", isOn: settings.$voiceKanjiDisplay)
+                .padding(.bottom)
+                .padding(.top)
+        }
+    }
+
+    var voiceHiraganaDisplay: some View {
+        HStack {
+            Toggle("should display Hiragana / Katakana", isOn: settings.$voiceHiraganaDisplay)
                 .padding(.bottom)
                 .padding(.top)
         }

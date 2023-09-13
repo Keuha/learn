@@ -14,7 +14,9 @@ struct VoiceRecognitionDisplay: View {
 
     @ObservedObject var model = VoiceRecognitionDisplayViewModel()
     @State var said: String = ""
+    @Injected(\.settingsProvider) var settings
     private var cancelBag = CancelBag()
+
     var body: some View {
         ZStack {
             Color.Custom.blue.ignoresSafeArea()
@@ -49,9 +51,13 @@ struct VoiceRecognitionDisplay: View {
     @ViewBuilder var readBlock: some View {
         Group {
             VStack {
-                SuitableText(model.content.kanji, fontSize: .title)
-                    .padding()
-                SuitableText(model.content.hiragana, fontSize: .subtitle)
+                if settings.voiceKanjiDisplay {
+                    SuitableText(model.content.kanji, fontSize: .title)
+                        .padding()
+                }
+                if settings.voiceHiraganaDisplay {
+                    SuitableText(model.content.hiragana, fontSize: .subtitle)
+                }
                 SuitableText(model.content.translation)
             }.padding()
         }
