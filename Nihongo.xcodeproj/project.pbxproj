@@ -25,12 +25,11 @@
 		9589F9852A8B623E006DD5E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9842A8B623E006DD5E5 /* Colors.swift */; };
 		9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9862A8B6364006DD5E5 /* Buttons.swift */; };
 		9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F9882A8B66C4006DD5E5 /* ContainerView.swift */; };
-		958A29482AA9B040001AEFFC /* VoiceTranscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A29472AA9B040001AEFFC /* VoiceTranscription.swift */; };
-		958A294B2AA9B191001AEFFC /* StubVoiceTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A294A2AA9B191001AEFFC /* StubVoiceTranscriber.swift */; };
 		958A294E2AA9B664001AEFFC /* VocalRecognitionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A294D2AA9B664001AEFFC /* VocalRecognitionViewModelTests.swift */; };
 		959AFE992A988F3E0072DECE /* NavigableMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE982A988F3E0072DECE /* NavigableMenuButton.swift */; };
 		959AFE9B2A9892660072DECE /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9A2A9892660072DECE /* Loadable.swift */; };
 		959AFE9D2A98B59F0072DECE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9C2A98B59F0072DECE /* CancelBag.swift */; };
+		959F0B102AB19A0C00C70007 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 959F0B0F2AB19A0C00C70007 /* SwiftSpeech */; };
 		95A88F842A8CAE3E00953FA2 /* VocabularyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */; };
 		95A88F862A8CB5C600953FA2 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F852A8CB5C600953FA2 /* FontSize.swift */; };
 		95A88F882A8CBF7900953FA2 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F872A8CBF7900953FA2 /* Reader.swift */; };
@@ -47,7 +46,6 @@
 		95C0F73E2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */; };
 		95C0F7412A936296009D5B0E /* VoiceAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */; };
 		95C0F7432A936321009D5B0E /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */; };
-		95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +79,6 @@
 		9589F9842A8B623E006DD5E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9589F9862A8B6364006DD5E5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		9589F9882A8B66C4006DD5E5 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		958A29472AA9B040001AEFFC /* VoiceTranscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTranscription.swift; sourceTree = "<group>"; };
-		958A294A2AA9B191001AEFFC /* StubVoiceTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubVoiceTranscriber.swift; sourceTree = "<group>"; };
 		958A294D2AA9B664001AEFFC /* VocalRecognitionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalRecognitionViewModelTests.swift; sourceTree = "<group>"; };
 		958A294F2AA9D431001AEFFC /* Nihongo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nihongo.xctestplan; sourceTree = "<group>"; };
 		959AFE982A988F3E0072DECE /* NavigableMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableMenuButton.swift; sourceTree = "<group>"; };
@@ -106,7 +102,6 @@
 		95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionDisplay.swift; sourceTree = "<group>"; };
 		95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAuthorization.swift; sourceTree = "<group>"; };
 		95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
-		95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTranscriber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F0B102AB19A0C00C70007 /* SwiftSpeech in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +235,6 @@
 			children = (
 				95B2C59A2A923C29009A4370 /* StubTextReader.swift */,
 				95B2C59C2A923C97009A4370 /* StubContentGenerator.swift */,
-				958A294A2AA9B191001AEFFC /* StubVoiceTranscriber.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -324,8 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */,
-				95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */,
-				958A29472AA9B040001AEFFC /* VoiceTranscription.swift */,
 			);
 			path = VocalRecognition;
 			sourceTree = "<group>";
@@ -357,6 +350,7 @@
 			);
 			name = Nihongo;
 			packageProductDependencies = (
+				959F0B0F2AB19A0C00C70007 /* SwiftSpeech */,
 			);
 			productName = Nihongo;
 			productReference = 956875EA2A8A1DBA004C5446 /* Nihongo.app */;
@@ -410,6 +404,7 @@
 			mainGroup = 956875E12A8A1DBA004C5446;
 			packageReferences = (
 				95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				959F0B0E2AB19A0C00C70007 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
 			);
 			productRefGroup = 956875EB2A8A1DBA004C5446 /* Products */;
 			projectDirPath = "";
@@ -470,10 +465,8 @@
 				959AFE992A988F3E0072DECE /* NavigableMenuButton.swift in Sources */,
 				9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */,
 				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
-				958A29482AA9B040001AEFFC /* VoiceTranscription.swift in Sources */,
 				956875EE2A8A1DBA004C5446 /* NihongoApp.swift in Sources */,
 				95861B8C2AB070A50069AC40 /* SettingsView.swift in Sources */,
-				95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */,
 				95B68F4E2AB061FE002AF70E /* InjectedValues.swift in Sources */,
 				9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */,
 				95B68F522AB0629B002AF70E /* GeneratedContent.swift in Sources */,
@@ -486,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				956875FF2A8A1DC1004C5446 /* NihongoTests.swift in Sources */,
-				958A294B2AA9B191001AEFFC /* StubVoiceTranscriber.swift in Sources */,
 				95B2C59D2A923C97009A4370 /* StubContentGenerator.swift in Sources */,
 				95B2C5992A923B69009A4370 /* VocabularyDisplayViewModelTests.swift in Sources */,
 				958A294E2AA9B664001AEFFC /* VocalRecognitionViewModelTests.swift in Sources */,
@@ -772,6 +764,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		959F0B0E2AB19A0C00C70007 /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cay-Zhang/SwiftSpeech";
+			requirement = {
+				kind = revision;
+				revision = 6e41f289f5ccc1751ef5674972d46b48b326c4c6;
+			};
+		};
 		95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint.git";
@@ -783,6 +783,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		959F0B0F2AB19A0C00C70007 /* SwiftSpeech */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 959F0B0E2AB19A0C00C70007 /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
+			productName = SwiftSpeech;
+		};
 		95B68ED12AAF5A5A002AF70E /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */;
