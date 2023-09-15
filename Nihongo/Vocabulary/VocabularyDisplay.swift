@@ -131,8 +131,8 @@ class VocabularyDisplayViewModel {
         return
         #else
         // doesn't work on simulator, seems to be buggy
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                read(content)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
+                self?.read(content)
             }
         #endif
     }

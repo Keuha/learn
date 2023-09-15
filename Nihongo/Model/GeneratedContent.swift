@@ -11,4 +11,5 @@ struct GeneratedContent: Codable, Equatable, Hashable {
     var kanji: String = ""
     var translation: String = ""
     var hiragana: String = ""
+    var knowledge: Knowledge = .new
 }

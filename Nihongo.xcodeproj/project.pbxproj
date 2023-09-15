@@ -31,6 +31,7 @@
 		959AFE992A988F3E0072DECE /* NavigableMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE982A988F3E0072DECE /* NavigableMenuButton.swift */; };
 		959AFE9B2A9892660072DECE /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9A2A9892660072DECE /* Loadable.swift */; };
 		959AFE9D2A98B59F0072DECE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AFE9C2A98B59F0072DECE /* CancelBag.swift */; };
+		95A416E62AB31EFF00B148EB /* Knowledgable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A416E52AB31EFF00B148EB /* Knowledgable.swift */; };
 		95A88F842A8CAE3E00953FA2 /* VocabularyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */; };
 		95A88F862A8CB5C600953FA2 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F852A8CB5C600953FA2 /* FontSize.swift */; };
 		95A88F882A8CBF7900953FA2 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A88F872A8CBF7900953FA2 /* Reader.swift */; };
@@ -47,6 +48,11 @@
 		95C0F73E2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */; };
 		95C0F7412A936296009D5B0E /* VoiceAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */; };
 		95C0F7432A936321009D5B0E /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */; };
+		95CBF1052AB30D87009763E4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 95CBF1042AB30D87009763E4 /* Realm */; };
+		95CBF1072AB30D87009763E4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95CBF1062AB30D87009763E4 /* RealmSwift */; };
+		95CBF10A2AB30E06009763E4 /* ReviewedGeneratedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CBF1092AB30E06009763E4 /* ReviewedGeneratedContent.swift */; };
+		95CBF10C2AB313A8009763E4 /* HistoryGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CBF10B2AB313A8009763E4 /* HistoryGenerator.swift */; };
+		95CBF10E2AB314F8009763E4 /* Trackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CBF10D2AB314F8009763E4 /* Trackable.swift */; };
 		95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +94,7 @@
 		959AFE982A988F3E0072DECE /* NavigableMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableMenuButton.swift; sourceTree = "<group>"; };
 		959AFE9A2A9892660072DECE /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		959AFE9C2A98B59F0072DECE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		95A416E52AB31EFF00B148EB /* Knowledgable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knowledgable.swift; sourceTree = "<group>"; };
 		95A88F832A8CAE3E00953FA2 /* VocabularyDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyDisplay.swift; sourceTree = "<group>"; };
 		95A88F852A8CB5C600953FA2 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		95A88F872A8CBF7900953FA2 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
@@ -106,6 +113,9 @@
 		95C0F73D2A935E3E009D5B0E /* VoiceRecognitionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionDisplay.swift; sourceTree = "<group>"; };
 		95C0F7402A936296009D5B0E /* VoiceAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAuthorization.swift; sourceTree = "<group>"; };
 		95C0F7422A936321009D5B0E /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		95CBF1092AB30E06009763E4 /* ReviewedGeneratedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewedGeneratedContent.swift; sourceTree = "<group>"; };
+		95CBF10B2AB313A8009763E4 /* HistoryGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGenerator.swift; sourceTree = "<group>"; };
+		95CBF10D2AB314F8009763E4 /* Trackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trackable.swift; sourceTree = "<group>"; };
 		95E29F8C2A9F260800006C39 /* VoiceTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTranscriber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CBF1072AB30D87009763E4 /* RealmSwift in Frameworks */,
+				95CBF1052AB30D87009763E4 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +165,7 @@
 		956875EC2A8A1DBA004C5446 /* Nihongo */ = {
 			isa = PBXGroup;
 			children = (
+				95CBF1082AB30DF5009763E4 /* DBModel */,
 				95B68F502AB06270002AF70E /* Model */,
 				95B68F492AB06147002AF70E /* Injection */,
 				95B68F482AB0609C002AF70E /* Settings */,
@@ -306,6 +319,7 @@
 		95B68F502AB06270002AF70E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95A416E52AB31EFF00B148EB /* Knowledgable.swift */,
 				95B68F512AB0629B002AF70E /* GeneratedContent.swift */,
 				95B68F542AB062B0002AF70E /* SettingsValues.swift */,
 			);
@@ -316,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				95A88F8C2A8DFFBB00953FA2 /* VocabularyGenerator.swift */,
+				95CBF10B2AB313A8009763E4 /* HistoryGenerator.swift */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -339,6 +354,15 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
+		95CBF1082AB30DF5009763E4 /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				95CBF1092AB30E06009763E4 /* ReviewedGeneratedContent.swift */,
+				95CBF10D2AB314F8009763E4 /* Trackable.swift */,
+			);
+			path = DBModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +381,8 @@
 			);
 			name = Nihongo;
 			packageProductDependencies = (
+				95CBF1042AB30D87009763E4 /* Realm */,
+				95CBF1062AB30D87009763E4 /* RealmSwift */,
 			);
 			productName = Nihongo;
 			productReference = 956875EA2A8A1DBA004C5446 /* Nihongo.app */;
@@ -410,6 +436,7 @@
 			mainGroup = 956875E12A8A1DBA004C5446;
 			packageReferences = (
 				95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				95CBF1032AB30D87009763E4 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 956875EB2A8A1DBA004C5446 /* Products */;
 			projectDirPath = "";
@@ -454,6 +481,7 @@
 				9589F9872A8B6364006DD5E5 /* Buttons.swift in Sources */,
 				95BB26B12A9B575A00C0C159 /* NavigableVoiceMenuButton.swift in Sources */,
 				95A88F862A8CB5C600953FA2 /* FontSize.swift in Sources */,
+				95CBF10C2AB313A8009763E4 /* HistoryGenerator.swift in Sources */,
 				95A88F842A8CAE3E00953FA2 /* VocabularyDisplay.swift in Sources */,
 				95C0F7412A936296009D5B0E /* VoiceAuthorization.swift in Sources */,
 				95B68F552AB062B0002AF70E /* SettingsValues.swift in Sources */,
@@ -467,6 +495,7 @@
 				95A88F882A8CBF7900953FA2 /* Reader.swift in Sources */,
 				9589F97D2A8A517F006DD5E5 /* Fonts.swift in Sources */,
 				959AFE9B2A9892660072DECE /* Loadable.swift in Sources */,
+				95CBF10E2AB314F8009763E4 /* Trackable.swift in Sources */,
 				959AFE992A988F3E0072DECE /* NavigableMenuButton.swift in Sources */,
 				9589F9892A8B66C4006DD5E5 /* ContainerView.swift in Sources */,
 				956875F02A8A1DBA004C5446 /* WelcomeScreen.swift in Sources */,
@@ -475,6 +504,8 @@
 				95861B8C2AB070A50069AC40 /* SettingsView.swift in Sources */,
 				95E29F8D2A9F260800006C39 /* VoiceTranscriber.swift in Sources */,
 				95B68F4E2AB061FE002AF70E /* InjectedValues.swift in Sources */,
+				95CBF10A2AB30E06009763E4 /* ReviewedGeneratedContent.swift in Sources */,
+				95A416E62AB31EFF00B148EB /* Knowledgable.swift in Sources */,
 				9589F9792A8A479B006DD5E5 /* SuitableText.swift in Sources */,
 				95B68F522AB0629B002AF70E /* GeneratedContent.swift in Sources */,
 				95C0F7432A936321009D5B0E /* AuthorizationRequest.swift in Sources */,
@@ -780,6 +811,14 @@
 				version = 0.52.0;
 			};
 		};
+		95CBF1032AB30D87009763E4 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.42.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -787,6 +826,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95B68ECF2AAF5A27002AF70E /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		95CBF1042AB30D87009763E4 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CBF1032AB30D87009763E4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		95CBF1062AB30D87009763E4 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CBF1032AB30D87009763E4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
